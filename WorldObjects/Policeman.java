@@ -34,8 +34,8 @@ public class Policeman extends WorldObject {
 
         };
 
-        Collection<PlaceWithLight> list = lamp.getLightedPlaces();
-        for (PlaceWithLight pl : list) {
+        Collection<WorldObject> list = lamp.getLightedPlaces();
+        for (WorldObject pl : list) {
             pl.addEnterHandler(ev);
         }
 

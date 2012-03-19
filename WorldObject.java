@@ -2,7 +2,7 @@ package drinker;
 
 import java.util.ArrayDeque;
 
-public class WorldObject {
+public abstract class WorldObject {
     
     protected World world;
     protected int x;
@@ -34,9 +34,7 @@ public class WorldObject {
         return y;
     }
     
-    public char draw(){
-        return ' ';
-    }
+    public abstract char draw();
     
     public void onTick(){
         
@@ -89,13 +87,9 @@ public class WorldObject {
         return (this.x == o.x) && (this.y == o.y);
     }
         
-    public static void MutuallyCollision(WorldObject a, WorldObject b){
+    public static void mutuallyCollision(WorldObject a, WorldObject b){
         a.onCollision(b);
         b.onCollision(a);
     }
-    
-    public static char drawDefault(){
-        return '0';
-    }
-    
+       
 }

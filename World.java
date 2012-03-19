@@ -39,6 +39,12 @@ public class World {
 
     private void InitObjects() {
 
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                this.addObject(new Ground(i, j));
+            }
+        }
+
         Lamp l = new Lamp(7, 3);
         this.addObject(l);
         l.switchOn();
@@ -97,12 +103,10 @@ public class World {
 
         for (int j = 0; j < width; j++) {
             for (int i = 0; i < height; i++) {
-                if (!worldObjects[i][j].isEmpty()) {
-                    stream.print(worldObjects[i][j].get(
-                            worldObjects[i][j].size() - 1).draw());
-                } else {
-                    stream.print(WorldObject.drawDefault());
-                }
+
+                stream.print(worldObjects[i][j].get(
+                        worldObjects[i][j].size() - 1).draw());
+
             }
             stream.println();
         }
@@ -223,13 +227,13 @@ public class World {
             if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
                 break;
             }
-            
+
             nextStep.x = 0;
             nextStep.y = 1;
             if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
                 break;
             }
-            
+
             nextStep.x = 0;
             nextStep.y = -1;
             if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
@@ -275,8 +279,8 @@ public class World {
             prevMatrix[newX][newY] = current.copy();
             return true;
         }
-        
-        
+
+
         if (!isTakePlace(newX, newY) && prevMatrix[newX][newY] == null) {
             queue.add(new Point2D(newX, newY));
             prevMatrix[newX][newY] = current.copy();

@@ -1,6 +1,5 @@
 package drinker.WorldObjects;
 
-import drinker.Pair;
 import drinker.Point2D;
 import drinker.WorldObject;
 
@@ -53,7 +52,7 @@ public class Toper extends WorldObject {
 
         Collection<WorldObject> objs = world.getObjectAtXY(newX, newY);
         for (WorldObject w : objs) {
-            WorldObject.MutuallyCollision(this, w);   
+            WorldObject.mutuallyCollision(this, w);   
         }
         
         if(fellAsleep || suspended){

@@ -8,10 +8,9 @@ import java.util.Collections;
 
 public class Lamp extends WorldObject{
     
-    private ArrayList<PlaceWithLight> lightedPlaces;
+    private ArrayList<WorldObject> lightedPlaces = new ArrayList<WorldObject>();
     public Lamp(int x, int y) {
-        super(x, y);
-        lightedPlaces = new ArrayList<PlaceWithLight>();
+        super(x, y);        
     }
 
     @Override
@@ -33,9 +32,11 @@ public class Lamp extends WorldObject{
                 if(i == 0 && j == 0)
                     continue;
                 
-                PlaceWithLight pl = new PlaceWithLight(this.x + i, this.y + j);
-                world.addObject(pl);
-                lightedPlaces.add(pl);
+                // Based on fact that world guarantee that the lowest 
+                // WorldObject is ground and it always exist
+                lightedPlaces.add(
+                        world.getObjectAtXY(this.x + i, this.y + j)
+                                .iterator().next());
                 
             }
         }
@@ -43,7 +44,7 @@ public class Lamp extends WorldObject{
 
     }
     
-    public Collection<PlaceWithLight> getLightedPlaces(){
+    public Collection<WorldObject> getLightedPlaces(){
         return Collections.unmodifiableCollection(lightedPlaces);
     }
     
