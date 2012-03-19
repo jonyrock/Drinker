@@ -7,10 +7,13 @@ import java.util.Collection;
 
 public class Toper extends WorldObject {
 
-    boolean fellAsleep;
-    boolean fellAsleepDown;
-    boolean suspended;
-    boolean hasBottle;
+    private boolean fellAsleep;
+    private boolean fellAsleepDown;
+    
+    // true means that toper miss   
+    // tick after facing with bottle
+    private boolean suspended;                                        
+    private boolean hasBottle;
 
     public Toper(int x, int y) {        
         super(x,y);
@@ -100,11 +103,16 @@ public class Toper extends WorldObject {
 
     
     private void tryDropBottle(){
+        
         int r = ((int)(Math.random() * 100)) % 30;
+        
+        // it is not matter that is 13 or something else 
+        // because each variant has the same probability 
         if(r != 13)
             return;
         world.addObject(new Bottle(this.x, this.y));
         hasBottle = false;
+        
     }
     
     private Point2D getNewDirection() {

@@ -145,31 +145,7 @@ public class World {
 
     }
 
-    /**
-     * Is place free to move for policeman?
-     * It reacts almost the same as toper
-     * @param x position in the world
-     * @param y position in the world
-     * @return is position free to move
-     */
-    public boolean isTakePlace(int x, int y) {
-
-        Collection<WorldObject> collection = this.getObjectAtXY(x, y);
-
-        if (collection == null)
-            return true;
-
-        for (WorldObject w : collection) {
-            if (w.isStopAble() || w.isSuspendAble())
-                return true;            
-        }
-
-
-        return false;
-
-    }
-
-
+    
     private void addToper() {
         addObject(new Toper(9, 1));
     }
@@ -198,6 +174,30 @@ public class World {
 
     }
 
+    /**
+     * Is place free to move for policeman?
+     * It reacts almost the same as toper
+     * @param x position in the world
+     * @param y position in the world
+     * @return is position free to move
+     */
+    public boolean isTakePlace(int x, int y) {
+
+        Collection<WorldObject> collection = this.getObjectAtXY(x, y);
+
+        if (collection == null)
+            return true;
+
+        for (WorldObject w : collection) {
+            if (w.isStopAble() || w.isSuspendAble())
+                return true;
+        }
+
+
+        return false;
+
+    }
+    
     public Point2D findDirectionOnClosestPath(
             WorldObject start, WorldObject finish) {
 
