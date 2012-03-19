@@ -272,14 +272,14 @@ public class World {
         int newY = current.y + step.y;
 
         if (newX == finish.getX() && newY == finish.getY()) {
-            prevMatrix[newX][newY] = current.clone();
+            prevMatrix[newX][newY] = current.copy();
             return true;
         }
         
         
         if (!isTakePlace(newX, newY) && prevMatrix[newX][newY] == null) {
             queue.add(new Point2D(newX, newY));
-            prevMatrix[newX][newY] = current.clone();
+            prevMatrix[newX][newY] = current.copy();
         }
 
 
