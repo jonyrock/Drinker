@@ -70,7 +70,12 @@ public abstract class WorldObject {
     public boolean isSuspendAble(){
         return false;
     }
-    
+
+    /**
+     * True means that toper will not fully stop.
+     * Only stumble.
+     * @return true or false
+     */
     public boolean isLatencySuspendAble(){
         return false;
     }
@@ -78,11 +83,7 @@ public abstract class WorldObject {
     public boolean isNeedPoliceHelp(){
         return false;
     }
-    
-    public boolean isTakePlace(){
-        return true;
-    }
-    
+            
     public boolean isSameLocation(WorldObject o){
         return (this.x == o.x) && (this.y == o.y);
     }

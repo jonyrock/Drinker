@@ -145,6 +145,13 @@ public class World {
 
     }
 
+    /**
+     * Is place free to move for policeman?
+     * It reacts almost the same as toper
+     * @param x position in the world
+     * @param y position in the world
+     * @return is position free to move
+     */
     public boolean isTakePlace(int x, int y) {
 
         Collection<WorldObject> collection = this.getObjectAtXY(x, y);
@@ -153,8 +160,8 @@ public class World {
             return true;
 
         for (WorldObject w : collection) {
-            if (w.isTakePlace())
-                return true;
+            if (w.isStopAble() || w.isSuspendAble())
+                return true;            
         }
 
 
