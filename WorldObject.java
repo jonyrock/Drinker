@@ -3,29 +3,29 @@ package drinker;
 import java.util.ArrayDeque;
 
 public abstract class WorldObject {
-    
+
     protected World world;
     protected int x;
     protected int y;
-    
+
     protected ArrayDeque<ObjectEventHandler> onEnterEvent;
-    
-    
-    public WorldObject(int x, int y){
+
+
+    public WorldObject(int x, int y) {
         this.x = x;
         this.y = y;
-        
+
         this.onEnterEvent = new ArrayDeque<ObjectEventHandler>();
     }
-    
-    public void addEnterHandler(ObjectEventHandler handler){
+
+    public void addEnterHandler(ObjectEventHandler handler) {
         this.onEnterEvent.add(handler);
     }
-    
-    public void removeEnterHandler(ObjectEventHandler handler){
+
+    public void removeEnterHandler(ObjectEventHandler handler) {
         this.onEnterEvent.remove(handler);
     }
-    
+
     public int getX() {
         return x;
     }
@@ -33,64 +33,65 @@ public abstract class WorldObject {
     public int getY() {
         return y;
     }
-    
+
     public abstract char draw();
-    
-    public void onTick(){
-        
+
+    public void onTick() {
+
     }
-    
-    public void onCollision(WorldObject o){
-        
+
+    public void onCollision(WorldObject o) {
+
     }
-    
-    public void onEnter(WorldObject o){
-        
-        if(this.onEnterEvent.isEmpty())
+
+    public void onEnter(WorldObject o) {
+
+        if (this.onEnterEvent.isEmpty())
             return;
-        
-        for (ObjectEventHandler h : this.onEnterEvent){
+
+        for (ObjectEventHandler h : this.onEnterEvent) {
             h.onEvent(o);
         }
-        
+
     }
-    
-    public void setWorld(World w){
+
+    public void setWorld(World w) {
         this.world = w;
     }
-    
-    public boolean isMovable(){
+
+    public boolean isMovable() {
         return false;
     }
-    
-    public boolean isStopAble(){
+
+    public boolean isStopAble() {
         return false;
     }
-    
-    public boolean isSuspendAble(){
+
+    public boolean isSuspendAble() {
         return false;
     }
 
     /**
      * True means that toper will not fully stop.
      * Only stumble.
+     *
      * @return true or false
      */
-    public boolean isLatencySuspendAble(){
+    public boolean isLatencySuspendAble() {
         return false;
     }
-    
-    public boolean isNeedPoliceHelp(){
+
+    public boolean isNeedPoliceHelp() {
         return false;
     }
-            
-    public boolean isSameLocation(WorldObject o){
+
+    public boolean isSameLocation(WorldObject o) {
         return (this.x == o.x) && (this.y == o.y);
     }
-        
-    public static void mutuallyCollision(WorldObject a, WorldObject b){
+
+    public static void mutuallyCollision(WorldObject a, WorldObject b) {
         a.onCollision(b);
         b.onCollision(a);
     }
-       
+
 }

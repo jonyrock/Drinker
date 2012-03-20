@@ -300,7 +300,7 @@ public class World {
     }
 
     public boolean isPossibleForStep(int x, int y) {        
-        return !(x >= width - 1 || x < 0 || y >= height || y < 0);
+        return !(x >= width - 1 || x < 0 || y >= height || y < 1);
     }
     
 }
