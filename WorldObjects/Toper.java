@@ -134,11 +134,12 @@ public class Toper extends WorldObject {
         if (r == 3) {
             xt = -1;
         }
-
-        if (x + xt >= world.width - 1 || x + xt < 0) {
+        
+        if(!world.isPossibleForStep(x + xt, y)){        
             xt *= (-1);
         }
 
+        // TODO as xt
         if (y + yt >= world.width || y + yt < 1) {
             yt *= (-1);
         }
