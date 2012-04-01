@@ -9,23 +9,37 @@ public abstract class WorldObject {
     protected int y;
 
     protected ArrayDeque<ObjectEventHandler> onEnterEvent;
-
+    protected ArrayDeque<ObjectEventHandler> onMutuallyCollisionEvent;
+        
 
     public WorldObject(int x, int y) {
         this.x = x;
         this.y = y;
 
         this.onEnterEvent = new ArrayDeque<ObjectEventHandler>();
+        this.onMutuallyCollisionEvent = new ArrayDeque<ObjectEventHandler>();
     }
 
     public void addEnterHandler(ObjectEventHandler handler) {
         this.onEnterEvent.add(handler);
     }
-
     public void removeEnterHandler(ObjectEventHandler handler) {
         this.onEnterEvent.remove(handler);
     }
 
+    /**
+     * Event triggering after collision processing
+     * @param handler ... 
+     */
+    public void addMutuallyCollisionHandler(ObjectEventHandler handler) {
+        this.onMutuallyCollisionEvent.add(handler);
+    }
+    public void removeMutuallyCollisionHandler(ObjectEventHandler handler) {
+        this.onMutuallyCollisionEvent.remove(handler);
+    }
+
+    
+    
     public int getX() {
         return x;
     }
@@ -90,8 +104,18 @@ public abstract class WorldObject {
     }
 
     public static void mutuallyCollision(WorldObject a, WorldObject b) {
+
         a.onCollision(b);
         b.onCollision(a);
+
+        for (ObjectEventHandler h : a.onMutuallyCollisionEvent) {
+            h.onEvent(b);
+        }
+
+        for (ObjectEventHandler h : b.onMutuallyCollisionEvent) {
+            h.onEvent(a);
+        }
+        
     }
 
 }

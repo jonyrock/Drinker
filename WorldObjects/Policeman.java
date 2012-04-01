@@ -13,6 +13,7 @@ public class Policeman extends WorldObject {
     protected WorldObject currentTarget;
     boolean busy;
     PoliceStation policeStation;
+    private final Lamp lamp;
 
     public Policeman(Lamp lamp, PoliceStation policeStation, int x, int y) {
 
@@ -23,7 +24,13 @@ public class Policeman extends WorldObject {
         this.busy = false;
         this.policeStation = policeStation;
         this.currentTarget = null;
+        this.lamp = lamp;
 
+
+
+    }
+    
+    public void bindToLamp(){
         ObjectEventHandler ev = new ObjectEventHandler() {
 
             public void onEvent(WorldObject o) {
@@ -38,10 +45,8 @@ public class Policeman extends WorldObject {
         for (WorldObject pl : list) {
             pl.addEnterHandler(ev);
         }
-
-
     }
-
+    
     @Override
     public void onTick() {
 

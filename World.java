@@ -12,6 +12,13 @@ public class World {
     public final int height;
     public final PrintStream stream;
 
+    // defaults objects
+    public final Pole pole;
+    public final Tavern tavern;
+    public final Lamp lamp;
+    public final PoliceStation policeStation;
+    public final Policeman policeman;
+
     private ArrayList<WorldObject> movableObjects;
     private ArrayList<WorldObject> worldObjects[][];
 
@@ -24,7 +31,7 @@ public class World {
         this.movableObjects = new ArrayList<WorldObject>();
 
 
-        this.worldObjects = (ArrayList<WorldObject>[][])               
+        this.worldObjects = (ArrayList<WorldObject>[][])
                 Array.newInstance(new ArrayList<WorldObject>().getClass(),
                         width, height);
 
@@ -34,7 +41,14 @@ public class World {
             }
         }
 
+        pole = new Pole(7, 7);
+        tavern = new Tavern(9, 0);
+        lamp = new Lamp(7, 3);
+        policeStation = new PoliceStation(15, 3);
+        policeman = new Policeman(lamp, policeStation, policeStation.getX(), policeStation.getY());
+
         InitObjects();
+
 
     }
 
@@ -46,9 +60,9 @@ public class World {
             }
         }
 
-        Lamp l = new Lamp(7, 3);
-        this.addObject(l);
-        l.switchOn();
+
+        this.addObject(lamp);
+        lamp.switchOn();
 
         for (int i = 0; i < 16; i++) {
             if (i == 9)
@@ -62,14 +76,12 @@ public class World {
             this.addObject(new WhiteSpace(15, i));
         }
 
-        this.addObject(new Pole(7, 7));
-        this.addObject(new Tavern(9, 0));
-        PoliceStation policeStation = new PoliceStation(15, 3);
 
-        this.addObject(new Policeman(l, policeStation,
-                policeStation.getX(), policeStation.getY()));
-
+        this.addObject(pole);
+        this.addObject(tavern);
         this.addObject(policeStation);
+        this.addObject(policeman);
+        policeman.bindToLamp();
 
 
     }
@@ -300,8 +312,8 @@ public class World {
 
     }
 
-    public boolean isPossibleForStep(int x, int y) {        
+    public boolean isPossibleForStep(int x, int y) {
         return !(x >= width - 1 || x < 0 || y >= height || y < 1);
     }
-    
+
 }
