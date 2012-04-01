@@ -23,9 +23,7 @@ public abstract class WorldObject {
     public void addEnterHandler(ObjectEventHandler handler) {
         this.onEnterEvent.add(handler);
     }
-    public void removeEnterHandler(ObjectEventHandler handler) {
-        this.onEnterEvent.remove(handler);
-    }
+    
 
     /**
      * Event triggering after collision processing
@@ -34,10 +32,7 @@ public abstract class WorldObject {
     public void addMutuallyCollisionHandler(ObjectEventHandler handler) {
         this.onMutuallyCollisionEvent.add(handler);
     }
-    public void removeMutuallyCollisionHandler(ObjectEventHandler handler) {
-        this.onMutuallyCollisionEvent.remove(handler);
-    }
-
+  
     
     
     public int getX() {
@@ -72,7 +67,11 @@ public abstract class WorldObject {
     public void setWorld(World w) {
         this.world = w;
     }
-
+    
+    public boolean isSuspended(){
+        return false;
+    }
+    
     public boolean isMovable() {
         return false;
     }

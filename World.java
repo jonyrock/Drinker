@@ -22,6 +22,8 @@ public class World {
     private ArrayList<WorldObject> movableObjects;
     private ArrayList<WorldObject> worldObjects[][];
 
+    protected ArrayDeque<ObjectEventHandler> onAddObject;
+
     @SuppressWarnings({"unchecked"})
     public World(int width, int height, PrintStream stream) {
 
@@ -29,6 +31,7 @@ public class World {
         this.height = height;
         this.stream = stream;
         this.movableObjects = new ArrayList<WorldObject>();
+        this.onAddObject = new ArrayDeque<ObjectEventHandler>();
 
 
         this.worldObjects = (ArrayList<WorldObject>[][])
@@ -133,9 +136,17 @@ public class World {
             movableObjects.add(o);
 
         worldObjects[o.getX()][o.getY()].add(o);
-
+        
+        for(ObjectEventHandler ev : onAddObject){
+            ev.onEvent(o);
+        }
+        
     }
 
+    public void addAddObjectHandler(ObjectEventHandler handler) {
+        this.onAddObject.add(handler);
+    }
+    
     public void removeObject(WorldObject o) {
         if (movableObjects.contains(o)) {
             movableObjects.remove(o);

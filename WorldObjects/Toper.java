@@ -68,6 +68,11 @@ public class Toper extends WorldObject {
     }
 
     @Override
+    public boolean isSuspended() {
+        return suspended;
+    }
+
+    @Override
     public boolean isMovable() {
         return (!fellAsleep && !fellAsleepDown);
     }
