@@ -23,7 +23,8 @@ public class World {
         this.stream = stream;
         this.movableObjects = new ArrayList<WorldObject>();
 
-        this.worldObjects = (ArrayList<WorldObject>[][])
+
+        this.worldObjects = (ArrayList<WorldObject>[][])               
                 Array.newInstance(new ArrayList<WorldObject>().getClass(),
                         width, height);
 
