@@ -16,7 +16,7 @@ public class Main {
      */
     public static void main(String[] args) {
 
-        Game g1 = new Game(100);
+        new Game(1000);
 //        Game g2 = new Game(300);
 //        Game g3 = new Game(500);
 

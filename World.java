@@ -32,8 +32,7 @@ public class World {
 
 
         this.worldObjects = (ArrayList<WorldObject>[][])
-                Array.newInstance(new ArrayList<WorldObject>().getClass(),
-                        width, height);
+                Array.newInstance(ArrayList.class, width, height);
 
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
