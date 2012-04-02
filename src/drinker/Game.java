@@ -1,7 +1,5 @@
 package drinker;
 
-import drinker.WorldObjects.*;
-
 public class Game {
 
     public Game(int count) {

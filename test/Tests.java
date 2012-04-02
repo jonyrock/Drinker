@@ -1,5 +1,3 @@
-package drinker.tests;
-
 import drinker.ObjectEventHandler;
 import drinker.World;
 import drinker.WorldObject;

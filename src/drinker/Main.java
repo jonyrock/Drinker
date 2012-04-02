@@ -1,6 +1,5 @@
 package drinker;
 
-
 /**
  * Simple directories list
  *
