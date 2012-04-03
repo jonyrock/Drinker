@@ -1,6 +1,8 @@
 package drinker;
 
 import drinker.WorldObjects.*;
+import drinker.utils.ObjectEventHandler;
+import drinker.utils.WorldEvent;
 
 import java.io.PrintStream;
 import java.lang.reflect.Array;
@@ -22,7 +24,9 @@ public class World {
     private ArrayList<WorldObject> movableObjects;
     private ArrayList<WorldObject> worldObjects[][];
 
-    protected ArrayDeque<ObjectEventHandler> onAddObject;
+    protected WorldEvent onAddObjectEvent = new WorldEvent();
+    protected WorldEvent onPreTickEvent = new WorldEvent();
+    protected WorldEvent onPostTickEvent = new WorldEvent();
 
     @SuppressWarnings({"unchecked"})
     public World(int width, int height, PrintStream stream) {
@@ -31,7 +35,6 @@ public class World {
         this.height = height;
         this.stream = stream;
         this.movableObjects = new ArrayList<WorldObject>();
-        this.onAddObject = new ArrayDeque<ObjectEventHandler>();
 
 
         this.worldObjects = (ArrayList<WorldObject>[][])
@@ -92,9 +95,11 @@ public class World {
     private int tickCount = 0;
 
     public void tick() {
-
+        
         tickCount++;
         tickCursor--;
+
+        onPreTickEvent.emit(null);
 
         if (tickCount % 20 == 0) {
             addToper();
@@ -111,6 +116,7 @@ public class World {
 
         tickObject(movableObjects.get(tickCursor));
 
+        onPostTickEvent.emit(null);
 
     }
 
@@ -136,17 +142,23 @@ public class World {
             movableObjects.add(o);
 
         worldObjects[o.getX()][o.getY()].add(o);
-        
-        for(ObjectEventHandler ev : onAddObject){
-            ev.onEvent(o);
-        }
-        
+
+        onAddObjectEvent.emit(o);
+
     }
 
     public void addAddObjectHandler(ObjectEventHandler handler) {
-        this.onAddObject.add(handler);
+        this.onAddObjectEvent.add(handler);
     }
-    
+
+    public void addPreTickEvent(ObjectEventHandler handler) {
+        onPreTickEvent.add(handler);
+    }
+
+    public void addPostTickEvent(ObjectEventHandler handler) {
+        onPostTickEvent.add(handler);
+    }
+
     public void removeObject(WorldObject o) {
         if (movableObjects.contains(o)) {
             movableObjects.remove(o);
@@ -174,11 +186,11 @@ public class World {
     }
 
     private void tickObject(WorldObject o) {
-
+                    
         int x = o.getX();
         int y = o.getY();
 
-        o.onTick();
+        o.onWorldTick();
 
         int newX = o.getX();
         int newY = o.getY();
@@ -194,7 +206,8 @@ public class World {
         if (!o.isMovable()) {
             movableObjects.remove(o);
         }
-
+                
+        
     }
 
     /**

@@ -1,6 +1,7 @@
 package drinker;
 
-import java.util.ArrayDeque;
+import drinker.utils.ObjectEventHandler;
+import drinker.utils.WorldEvent;
 
 public abstract class WorldObject {
 
@@ -8,33 +9,45 @@ public abstract class WorldObject {
     protected int x;
     protected int y;
 
-    protected ArrayDeque<ObjectEventHandler> onEnterEvent;
-    protected ArrayDeque<ObjectEventHandler> onMutuallyCollisionEvent;
-        
+    protected WorldEvent onEnterEvent = new WorldEvent();
+    protected WorldEvent onMutuallyCollisionEvent = new WorldEvent();
+    protected WorldEvent onPreTickEvent = new WorldEvent();
+    protected WorldEvent onPostTickEvent = new WorldEvent();
+
 
     public WorldObject(int x, int y) {
         this.x = x;
         this.y = y;
 
-        this.onEnterEvent = new ArrayDeque<ObjectEventHandler>();
-        this.onMutuallyCollisionEvent = new ArrayDeque<ObjectEventHandler>();
     }
 
     public void addEnterHandler(ObjectEventHandler handler) {
         this.onEnterEvent.add(handler);
     }
-    
+
 
     /**
      * Event triggering after collision processing
-     * @param handler ... 
+     *
+     * @param handler ...
      */
     public void addMutuallyCollisionHandler(ObjectEventHandler handler) {
         this.onMutuallyCollisionEvent.add(handler);
     }
-  
-    
-    
+
+
+    /**
+     * object will be null
+     * @param e will 
+     */
+    public void addPreTickEvent(ObjectEventHandler e) {
+        onPreTickEvent.add(e);
+    }
+
+    public void addPostTickEvent(ObjectEventHandler e) {
+        onPostTickEvent.add(e);
+    }
+
     public int getX() {
         return x;
     }
@@ -45,33 +58,34 @@ public abstract class WorldObject {
 
     public abstract char draw();
 
-    public void onTick() {
+    /**
+     * proxy method for onTickEvent()
+     * need for trigger event
+     */
+    public final void onWorldTick() {
+        onPreTickEvent.emit(this);
+        onTick();
+        onPostTickEvent.emit(this);
+    }
 
+    public void onTick() {
     }
 
     public void onCollision(WorldObject o) {
-
     }
 
     public void onEnter(WorldObject o) {
-
-        if (this.onEnterEvent.isEmpty())
-            return;
-
-        for (ObjectEventHandler h : this.onEnterEvent) {
-            h.onEvent(o);
-        }
-
+        onEnterEvent.emit(o);
     }
 
     public void setWorld(World w) {
         this.world = w;
     }
-    
-    public boolean isSuspended(){
+
+    public boolean isSuspended() {
         return false;
     }
-    
+
     public boolean isMovable() {
         return false;
     }
@@ -107,14 +121,9 @@ public abstract class WorldObject {
         a.onCollision(b);
         b.onCollision(a);
 
-        for (ObjectEventHandler h : a.onMutuallyCollisionEvent) {
-            h.onEvent(b);
-        }
+        a.onMutuallyCollisionEvent.emit(b);
+        b.onMutuallyCollisionEvent.emit(a);
 
-        for (ObjectEventHandler h : b.onMutuallyCollisionEvent) {
-            h.onEvent(a);
-        }
-        
     }
 
 }

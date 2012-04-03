@@ -1,6 +1,6 @@
 package drinker.WorldObjects;
 
-import drinker.ObjectEventHandler;
+import drinker.utils.ObjectEventHandler;
 import drinker.Point2D;
 import drinker.WorldObject;
 

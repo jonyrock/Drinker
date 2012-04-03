@@ -1,4 +1,6 @@
-package drinker;
+package drinker.utils;
+
+import drinker.WorldObject;
 
 public interface ObjectEventHandler {
     

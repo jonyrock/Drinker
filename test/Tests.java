@@ -1,4 +1,4 @@
-import drinker.ObjectEventHandler;
+import drinker.utils.ObjectEventHandler;
 import drinker.World;
 import drinker.WorldObject;
 import drinker.WorldObjects.Bottle;
@@ -15,7 +15,9 @@ public class Tests {
 
     private World world;
     private boolean pos03visited;
-    private int testPositionsAttempts = 0;
+    private int testPositionsAttempts;
+    private boolean wasMoveOnTick;
+    private int tick;
 
 
     @Before
@@ -28,7 +30,10 @@ public class Tests {
         });
 
         world = new World(16, 16, printStream);
-
+        wasMoveOnTick = false;
+        pos03visited = false;
+        testPositionsAttempts = 0;
+        tick = 0;
     }
 
     void worldStart() {
@@ -39,10 +44,9 @@ public class Tests {
 
 
     /**
-     * Test checks: 
+     * Test checks:
      * - illegal positions
-     * - was visiting position (0, 3) at least one time 
-     * - only one unit was moved my world in each tick
+     * - was visiting position (0, 3) at least one time
      */
     @Test
     public void testPositions() {
@@ -110,7 +114,7 @@ public class Tests {
                                     Assert.assertTrue("Toper can move after meeting sleeping toper",
                                             t.isSuspended());
                                 } else {
-                                    if (world.getObjectAtXY(b.getX(), b.getY()).size() == 2) {                                        
+                                    if (world.getObjectAtXY(b.getX(), b.getY()).size() == 2) {
                                         Assert.assertTrue("Toper can't move after meeting not sleeping toper",
                                                 t.isMovable() && !t.isSuspended());
                                     }
@@ -126,7 +130,51 @@ public class Tests {
         worldStart();
 
     }
-    
-    
 
+    @Test
+    public void testOneTickOneMove() {
+
+        world.addPostTickEvent(new ObjectEventHandler() {
+            public void onEvent(WorldObject o) {
+                wasMoveOnTick = false;
+            }
+        });
+
+        world.addAddObjectHandler(new ObjectEventHandler() {
+            public void onEvent(WorldObject o) {
+                o.addPreTickEvent(new ObjectEventHandler() {
+                    public void onEvent(WorldObject o) {
+                        Assert.assertFalse("Two objects were moved", wasMoveOnTick);
+                        wasMoveOnTick = true;
+                    }
+                });
+            }
+        });
+
+        worldStart();
+
+    }
+    
+    @Test
+    public void testAdded20Toper(){
+        
+        world.addPostTickEvent(new ObjectEventHandler() {
+            public void onEvent(WorldObject o) {
+                tick++;
+                Assert.assertTrue("20 ticks without new toper.", tick < 20);
+            }
+        });
+
+        world.addAddObjectHandler(new ObjectEventHandler() {
+            public void onEvent(final WorldObject t) {
+                if (t.getClass().equals(Toper.class)) {
+                    tick = 0;
+                }
+            }
+        });
+        
+        worldStart();
+        
+    }
+    
 }

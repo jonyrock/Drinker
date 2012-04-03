@@ -1,4 +1,4 @@
-package drinker;
+package drinker.utils;
 
 public class Pair<T,E> {
     public T first;
