@@ -17,7 +17,9 @@ public class Tests {
     private boolean pos03visited;
     private int testPositionsAttempts;
     private boolean wasMoveOnTick;
+    private boolean policeMetToper;
     private int tick;
+    private int testPolicemanToperMeetAttempts;
 
 
     @Before
@@ -34,6 +36,8 @@ public class Tests {
         pos03visited = false;
         testPositionsAttempts = 0;
         tick = 0;
+        policeMetToper = false;
+        testPolicemanToperMeetAttempts = 0;
     }
 
     void worldStart() {
@@ -180,6 +184,24 @@ public class Tests {
         
     }
     
-    
+    @Test
+    public void testPolicemanToperMeet(){
+        
+        world.policeman.addMutuallyCollisionHandler(new ObjectEventHandler() {
+            public void onEvent(WorldObject o) {
+                if(o.getClass().equals(Toper.class)){
+                    policeMetToper = true;
+                }
+            }
+        });
+
+        worldStart();
+
+        if (!policeMetToper && testPolicemanToperMeetAttempts++ < 10) {
+            initWorld();
+            testPolicemanToperMeet();
+        }
+        
+    }
     
 }

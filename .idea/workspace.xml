@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="Test 20 toper, sleep&#10;">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Bottle.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Bottle.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Ground.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Ground.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Lamp.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Lamp.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Pole.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Pole.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/PoliceStation.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/PoliceStation.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Policeman.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Policeman.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Tavern.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Tavern.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/Toper.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Toper.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drinker/WorldObjects/WhiteSpace.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/WhiteSpace.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/test/Tests.java" afterPath="$PROJECT_DIR$/test/drinker/Tests.java" />
+    <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Tasks1basics.txt" afterPath="$PROJECT_DIR$/docs/Tasks1basics.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Tasks2utests.txt" afterPath="$PROJECT_DIR$/docs/Tasks2utests.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drinker/World.java" afterPath="$PROJECT_DIR$/src/drinker/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/drinker/Tests.java" afterPath="$PROJECT_DIR$/test/drinker/Tests.java" />
     </list>
     <ignored path="Drinker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,10 +62,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Tasks2utests.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Tasks2utests.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/Tasks2utests.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+            <state line="13" column="46" selection-start="665" selection-end="665" vertical-scroll-proportion="0.36833334">
               <folding />
             </state>
           </provider>
@@ -94,7 +83,7 @@
       <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/drinker/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+            <state line="19" column="20" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#World#0;class#World#0" expanded="false" />
                 <element signature="method#InitObjects#0;class#World#0" expanded="false" />
@@ -118,38 +107,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tests.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/drinker/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="22" selection-start="202" selection-end="202" vertical-scroll-proportion="0.19833334">
+            <state line="17" column="38" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
-                <element signature="class#565:686" expanded="false" />
-                <element signature="method#write#0;class#565:686" expanded="false" />
+                <element signature="class#649:770" expanded="false" />
+                <element signature="method#write#0;class#649:770" expanded="false" />
                 <element signature="method#worldStart#0;class#Tests#0" expanded="false" />
+                <element signature="docComment;method#testPositions#0;class#Tests#0" expanded="false" />
                 <element signature="method#testPositions#0;class#Tests#0" expanded="false" />
-                <element signature="class#1411:1577" expanded="false" />
-                <element signature="method#onEvent#0;class#1411:1577" expanded="false" />
+                <element signature="class#1571:1737" expanded="false" />
+                <element signature="method#onEvent#0;class#1571:1737" expanded="false" />
+                <element signature="method#testPositions#1;class#Tests#0" expanded="false" />
                 <element signature="method#testToperSleep#0;class#Tests#0" expanded="false" />
-                <element signature="class#2406:2674" expanded="false" />
-                <element signature="method#onEvent#0;class#2406:2674" expanded="false" />
+                <element signature="class#2566:2834" expanded="false" />
+                <element signature="method#onEvent#0;class#2566:2834" expanded="false" />
                 <element signature="method#testToperWithBottleAndToper#0;class#Tests#0" expanded="false" />
-                <element signature="class#2804:4397" expanded="false" />
-                <element signature="method#onEvent#0;class#2804:4397" expanded="false" />
-                <element signature="class#2992:4353" expanded="false" />
-                <element signature="method#onEvent#0;class#2992:4353" expanded="false" />
                 <element signature="method#testOneTickOneMove#0;class#Tests#0" expanded="false" />
-                <element signature="class#4516:4650" expanded="false" />
-                <element signature="method#onEvent#0;class#4516:4650" expanded="false" />
-                <element signature="class#4692:5078" expanded="false" />
-                <element signature="method#onEvent#0;class#4692:5078" expanded="false" />
-                <element signature="class#4802:5052" expanded="false" />
-                <element signature="method#onEvent#0;class#4802:5052" expanded="false" />
+                <element signature="class#4676:4810" expanded="false" />
+                <element signature="method#onEvent#0;class#4676:4810" expanded="false" />
+                <element signature="class#4852:5238" expanded="false" />
+                <element signature="method#onEvent#0;class#4852:5238" expanded="false" />
+                <element signature="class#4962:5212" expanded="false" />
+                <element signature="method#onEvent#0;class#4962:5212" expanded="false" />
                 <element signature="method#testAdded20Toper#0;class#Tests#0" expanded="false" />
-                <element signature="class#5206:5402" expanded="false" />
-                <element signature="method#onEvent#0;class#5206:5402" expanded="false" />
-                <element signature="class#5444:5649" expanded="false" />
-                <element signature="method#onEvent#0;class#5444:5649" expanded="false" />
+                <element signature="class#5366:5562" expanded="false" />
+                <element signature="method#onEvent#0;class#5366:5562" expanded="false" />
+                <element signature="class#5604:5809" expanded="false" />
+                <element signature="method#onEvent#0;class#5604:5809" expanded="false" />
+                <element signature="method#testPolicemanToperMeet#0;class#Tests#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -178,9 +167,9 @@
         <option value="$PROJECT_DIR$/src/drinker/WorldObject.java" />
         <option value="$PROJECT_DIR$/src/drinker/utils/WorldEvent.java" />
         <option value="$PROJECT_DIR$/test/Tests.java" />
-        <option value="$PROJECT_DIR$/docs/Tasks2utests.txt" />
         <option value="$PROJECT_DIR$/src/drinker/World.java" />
         <option value="$PROJECT_DIR$/test/drinker/Tests.java" />
+        <option value="$PROJECT_DIR$/docs/Tasks2utests.txt" />
       </list>
     </option>
   </component>
@@ -341,6 +330,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="worldObjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -625,7 +636,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test 20 toper, sleep&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Lamp pos test, Refoldering" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -641,6 +652,7 @@
     <MESSAGE value="Tests comments&#10;" />
     <MESSAGE value="Test 20 toper&#10;" />
     <MESSAGE value="Test 20 toper, sleep&#10;" />
+    <MESSAGE value=" Lamp pos test, Refoldering" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -690,13 +702,6 @@
         <state line="12" column="19" selection-start="263" selection-end="263" vertical-scroll-proportion="0.34" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Tasks2utests.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Ground.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="20" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0">
@@ -704,9 +709,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/drinker/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="38" selection-start="409" selection-end="409" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
+            <element signature="class#649:770" expanded="false" />
+            <element signature="method#write#0;class#649:770" expanded="false" />
+            <element signature="method#worldStart#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testPositions#0;class#Tests#0" expanded="false" />
+            <element signature="method#testPositions#0;class#Tests#0" expanded="false" />
+            <element signature="class#1571:1737" expanded="false" />
+            <element signature="method#onEvent#0;class#1571:1737" expanded="false" />
+            <element signature="method#testPositions#1;class#Tests#0" expanded="false" />
+            <element signature="method#testToperSleep#0;class#Tests#0" expanded="false" />
+            <element signature="class#2566:2834" expanded="false" />
+            <element signature="method#onEvent#0;class#2566:2834" expanded="false" />
+            <element signature="method#testToperWithBottleAndToper#0;class#Tests#0" expanded="false" />
+            <element signature="method#testOneTickOneMove#0;class#Tests#0" expanded="false" />
+            <element signature="class#4676:4810" expanded="false" />
+            <element signature="method#onEvent#0;class#4676:4810" expanded="false" />
+            <element signature="class#4852:5238" expanded="false" />
+            <element signature="method#onEvent#0;class#4852:5238" expanded="false" />
+            <element signature="class#4962:5212" expanded="false" />
+            <element signature="method#onEvent#0;class#4962:5212" expanded="false" />
+            <element signature="method#testAdded20Toper#0;class#Tests#0" expanded="false" />
+            <element signature="class#5366:5562" expanded="false" />
+            <element signature="method#onEvent#0;class#5366:5562" expanded="false" />
+            <element signature="class#5604:5809" expanded="false" />
+            <element signature="method#onEvent#0;class#5604:5809" expanded="false" />
+            <element signature="method#testPolicemanToperMeet#0;class#Tests#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
+        <state line="19" column="20" selection-start="412" selection-end="412" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="method#World#0;class#World#0" expanded="false" />
             <element signature="method#InitObjects#0;class#World#0" expanded="false" />
@@ -729,38 +769,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/drinker/Tests.java">
+    <entry file="file://$PROJECT_DIR$/docs/Tasks2utests.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="22" selection-start="202" selection-end="202" vertical-scroll-proportion="0.19833334">
-          <folding>
-            <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
-            <element signature="class#565:686" expanded="false" />
-            <element signature="method#write#0;class#565:686" expanded="false" />
-            <element signature="method#worldStart#0;class#Tests#0" expanded="false" />
-            <element signature="method#testPositions#0;class#Tests#0" expanded="false" />
-            <element signature="class#1411:1577" expanded="false" />
-            <element signature="method#onEvent#0;class#1411:1577" expanded="false" />
-            <element signature="method#testToperSleep#0;class#Tests#0" expanded="false" />
-            <element signature="class#2406:2674" expanded="false" />
-            <element signature="method#onEvent#0;class#2406:2674" expanded="false" />
-            <element signature="method#testToperWithBottleAndToper#0;class#Tests#0" expanded="false" />
-            <element signature="class#2804:4397" expanded="false" />
-            <element signature="method#onEvent#0;class#2804:4397" expanded="false" />
-            <element signature="class#2992:4353" expanded="false" />
-            <element signature="method#onEvent#0;class#2992:4353" expanded="false" />
-            <element signature="method#testOneTickOneMove#0;class#Tests#0" expanded="false" />
-            <element signature="class#4516:4650" expanded="false" />
-            <element signature="method#onEvent#0;class#4516:4650" expanded="false" />
-            <element signature="class#4692:5078" expanded="false" />
-            <element signature="method#onEvent#0;class#4692:5078" expanded="false" />
-            <element signature="class#4802:5052" expanded="false" />
-            <element signature="method#onEvent#0;class#4802:5052" expanded="false" />
-            <element signature="method#testAdded20Toper#0;class#Tests#0" expanded="false" />
-            <element signature="class#5206:5402" expanded="false" />
-            <element signature="method#onEvent#0;class#5206:5402" expanded="false" />
-            <element signature="class#5444:5649" expanded="false" />
-            <element signature="method#onEvent#0;class#5444:5649" expanded="false" />
-          </folding>
+        <state line="13" column="46" selection-start="665" selection-end="665" vertical-scroll-proportion="0.36833334">
+          <folding />
         </state>
       </provider>
     </entry>
