@@ -17,14 +17,14 @@
 Было заменено на проверку того, может ли пьяница там пройти. 
 Освещенное место было убрано. Теперь приложение тратит памяти еще O(n).
 
-10. drinker.WorldObjects.Toper#suspended - этот флаг вообще нужен? Есть ощущение, что нет.
+10. drinker.worldObjects.Toper#suspended - этот флаг вообще нужен? Есть ощущение, что нет.
 Был добавлен комментарий. 
 
-11. drinker.WorldObjects.Toper#tryDropBottle - if(r != 13) - забавно, но вопрос, почему 13, остается. 
+11. drinker.worldObjects.Toper#tryDropBottle - if(r != 13) - забавно, но вопрос, почему 13, остается. 
     Это классический Magic number, оставляющий читателя чесать репу. Либо комментарий, лучше - константа.
 Потому что любое число в диапозоне равновероятно. Однако комментарий был добавлен.
 
-12. drinker.WorldObjects.Toper#getNewDirection - логика, не выйдем ли за пределы поля, оказывается у пьяницы. 
+12. drinker.worldObjects.Toper#getNewDirection - логика, не выйдем ли за пределы поля, оказывается у пьяницы. 
     Ожидаю copypast'ов для других персонажей и проблем при добавлении полей с другой топологией.  
 Перенесено в логику World как метод World::isPossibleForStep
 
@@ -46,7 +46,7 @@ http://stackoverflow.com/questions/5430944/java-clone-operation-calling-super-cl
 Если этот класс будет упакован в библиотеку, то будет использоватся обычное наследование 
 для создания нового уровня абстракции 
 
-09. drinker.WorldObjects.Toper#fellAsleep, drinker.WorldObjects.Toper#fellAsleepDown - могут 
+09. drinker.worldObjects.Toper#fellAsleep, drinker.worldObjects.Toper#fellAsleepDown - могут 
     быть true одновременно? Два флага на state многовато. Почему не обойтись одним enum'ом?
 Это два разных абстрактных свойства объекта - enum здесь не поможет.
 

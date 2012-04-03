@@ -1,4 +1,4 @@
-package drinker.WorldObjects;
+package drinker.worldObjects;
 
 import drinker.Point2D;
 import drinker.WorldObject;

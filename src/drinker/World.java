@@ -1,6 +1,6 @@
 package drinker;
 
-import drinker.WorldObjects.*;
+import drinker.worldObjects.*;
 import drinker.utils.ObjectEventHandler;
 import drinker.utils.WorldEvent;
 
@@ -15,12 +15,12 @@ public class World {
     public final PrintStream stream;
 
     // defaults objects
-    public final Pole pole;
-    public final Tavern tavern;
-    public final Lamp lamp;
-    public final PoliceStation policeStation;
-    public final Policeman policeman;
-
+    final Pole pole;
+    final Tavern tavern;
+    final Lamp lamp;
+    final PoliceStation policeStation;
+    final Policeman policeman;
+    
     private ArrayList<WorldObject> movableObjects;
     private ArrayList<WorldObject> worldObjects[][];
 

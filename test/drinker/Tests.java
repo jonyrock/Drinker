@@ -1,8 +1,8 @@
+package drinker;
+
 import drinker.utils.ObjectEventHandler;
-import drinker.World;
-import drinker.WorldObject;
-import drinker.WorldObjects.Bottle;
-import drinker.WorldObjects.Toper;
+import drinker.worldObjects.Bottle;
+import drinker.worldObjects.Toper;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -47,6 +47,7 @@ public class Tests {
      * Test checks:
      * - illegal positions
      * - was visiting position (0, 3) at least one time
+     * - no one was at lamp position 
      */
     @Test
     public void testPositions() {
@@ -75,6 +76,8 @@ public class Tests {
         if (ground.getX() == 0 && ground.getY() == 3) {
             pos03visited = true;
         }
+        boolean isLampPosition = world.lamp.getX() == ground.getX() && world.lamp.getY() == ground.getY();
+        Assert.assertFalse("Somebody enter to lamp position", isLampPosition);
     }
 
     @Test
@@ -176,5 +179,7 @@ public class Tests {
         worldStart();
         
     }
+    
+    
     
 }
