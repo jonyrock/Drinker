@@ -38,9 +38,15 @@ public class Tests {
     }
 
 
+    /**
+     * Test checks: 
+     * - illegal positions
+     * - was visiting position (0, 3) at least one time 
+     * - only one unit was moved my world in each tick
+     */
     @Test
     public void testPositions() {
-        // on bottom is ground
+        // ground on bottom 
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 16; j++) {
                 final WorldObject ground = world.getObjectAtXY(i, j).iterator().next();
@@ -120,6 +126,7 @@ public class Tests {
         worldStart();
 
     }
-
+    
+    
 
 }
