@@ -46,7 +46,6 @@ public class Tests {
         }
     }
 
-
     /**
      * Test checks:
      * - illegal positions
@@ -55,6 +54,7 @@ public class Tests {
      */
     @Test
     public void testPositions() {
+        
         // ground on bottom 
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 16; j++) {
@@ -66,6 +66,7 @@ public class Tests {
                 });
             }
         }
+        
         worldStart();
         if (!pos03visited && testPositionsAttempts++ < 10) {
             initWorld();
@@ -86,7 +87,6 @@ public class Tests {
 
     @Test
     public void testToperSleep() {
-
         world.pole.addMutuallyCollisionHandler(new ObjectEventHandler() {
             public void onEvent(WorldObject o) {
                 if (o.getClass().equals(Toper.class)) {
@@ -94,9 +94,7 @@ public class Tests {
                 }
             }
         });
-
         worldStart();
-
     }
 
     @Test
