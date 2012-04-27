@@ -115,7 +115,7 @@ public class Tests {
                             if (b.getClass().equals(Toper.class)) {
                                 Toper anotherToper = (Toper) b;
                                 // check if he in sleep
-                                if (anotherToper.isStopAble() || anotherToper.isSuspendAble()) {
+                                if (anotherToper.isReasonToStop() || anotherToper.isSuspendAble()) {
                                     Assert.assertTrue("Toper can move after meeting sleeping toper",
                                             t.isSuspended());
                                 } else {

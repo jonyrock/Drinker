@@ -78,7 +78,7 @@ public class Toper extends WorldObject {
     }
 
     @Override
-    public boolean isStopAble() {
+    public boolean isReasonToStop() {
         return fellAsleep;
     }
 
@@ -95,7 +95,7 @@ public class Toper extends WorldObject {
     @Override
     public void onCollision(WorldObject o) {
 
-        if (o.isStopAble())
+        if (o.isReasonToStop())
             this.fellAsleep = true;
 
         if (o.isSuspendAble())

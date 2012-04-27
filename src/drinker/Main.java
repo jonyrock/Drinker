@@ -3,7 +3,7 @@ package drinker;
 /**
  * Simple directories list
  *
- * @author Alexey Velikiy. APTU. Java. Homework 2.
+ * @author Alexey Velikiy. APTU.
  * @version %I%, %G%
  */
 public class Main {

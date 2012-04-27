@@ -2,17 +2,15 @@ package drinker.worldObjects;
 
 import drinker.WorldObject;
 
-public class WhiteSpace extends WorldObject {
+public class BottleHouse extends WorldObject {
 
-        
-    public WhiteSpace(int x, int y) {
+    public BottleHouse(int x, int y) {
         super(x, y);
     }
-    
+
     @Override
     public char draw() {
-        return ' ';
+        return 'B';
     }
-    
-    
+
 }

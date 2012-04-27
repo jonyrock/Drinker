@@ -1,8 +1,8 @@
 package drinker;
 
-import drinker.worldObjects.*;
 import drinker.utils.ObjectEventHandler;
 import drinker.utils.WorldEvent;
+import drinker.worldObjects.*;
 
 import java.io.PrintStream;
 import java.lang.reflect.Array;
@@ -14,13 +14,16 @@ public class World {
     public final int height;
     public final PrintStream stream;
 
-    // defaults objects
+    // defaults obje
+    // cts
     final Pole pole;
     final Tavern tavern;
     final Lamp lamp;
     final PoliceStation policeStation;
     final Policeman policeman;
-    
+    final Beggar beggar;
+    final BottleHouse bottleHouse;
+
     private ArrayList<WorldObject> movableObjects;
     private ArrayList<WorldObject> worldObjects[][];
 
@@ -51,6 +54,8 @@ public class World {
         lamp = new Lamp(7, 3);
         policeStation = new PoliceStation(15, 3);
         policeman = new Policeman(lamp, policeStation, policeStation.getX(), policeStation.getY());
+        beggar = new Beggar(16, 4);
+        bottleHouse = new BottleHouse(16, 4);
 
         InitObjects();
 
@@ -69,16 +74,17 @@ public class World {
         this.addObject(lamp);
         lamp.switchOn();
 
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < width; i++) {
+            this.addObject(new FieldBorder(i, height - 1));
             if (i == 9)
                 continue;
-            this.addObject(new WhiteSpace(i, 0));
+            this.addObject(new FieldBorder(i, 0));
         }
 
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < height; i++) {
             if (i == 3)
                 continue;
-            this.addObject(new WhiteSpace(15, i));
+            this.addObject(new FieldBorder(15, i));
         }
 
 
@@ -86,6 +92,8 @@ public class World {
         this.addObject(tavern);
         this.addObject(policeStation);
         this.addObject(policeman);
+        this.addObject(beggar);
+        this.addObject(bottleHouse);
         policeman.bindToLamp();
 
 
@@ -95,7 +103,7 @@ public class World {
     private int tickCount = 0;
 
     public void tick() {
-        
+
         tickCount++;
         tickCursor--;
 
@@ -122,8 +130,8 @@ public class World {
 
     public void drawScene() {
 
-        for (int j = 0; j < width; j++) {
-            for (int i = 0; i < height; i++) {
+        for (int j = 0; j < height; j++) {
+            for (int i = 0; i < width; i++) {
 
                 stream.print(worldObjects[i][j].get(
                         worldObjects[i][j].size() - 1).draw());
@@ -186,7 +194,7 @@ public class World {
     }
 
     private void tickObject(WorldObject o) {
-                    
+
         int x = o.getX();
         int y = o.getY();
 
@@ -206,8 +214,8 @@ public class World {
         if (!o.isMovable()) {
             movableObjects.remove(o);
         }
-                
-        
+
+
     }
 
     /**
@@ -222,14 +230,15 @@ public class World {
 
         Collection<WorldObject> collection = this.getObjectAtXY(x, y);
 
-        if (collection == null)
+        if (collection == null) {
             return true;
-
-        for (WorldObject w : collection) {
-            if (w.isStopAble() || w.isSuspendAble())
-                return true;
         }
 
+        for (WorldObject w : collection) {
+            if (w.isReasonToStop() || w.isSuspendAble()) {
+                return true;
+            }
+        }
 
         return false;
 
@@ -336,7 +345,7 @@ public class World {
     }
 
     public boolean isPossibleForStep(int x, int y) {
-        return !(x >= width - 1 || x < 0 || y >= height || y < 1);
+        return !(x >= width - 1 || x < 0 || y >= height - 1 || y < 1);
     }
 
 }

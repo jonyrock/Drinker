@@ -90,7 +90,7 @@ public abstract class WorldObject {
         return false;
     }
 
-    public boolean isStopAble() {
+    public boolean isReasonToStop() {
         return false;
     }
 

@@ -9,8 +9,5 @@ public class Pair<T,E> {
         this.second = second;
     }
     
-    public boolean isEqual(Pair<T,E> pair){
-        return (this.first == pair.first) && (this.second == pair.second);
-    }
     
 }
