@@ -4,8 +4,8 @@ public class Game {
 
     public Game(int count) {
 
-        World w = new World(16, 17, System.out);
-        
+        World w = new World(System.out);
+
 
         for (int i = 0; i < count; i++) {
 
@@ -18,9 +18,9 @@ public class Game {
 //           w.drawScene();
 //            
             w.tick();
-            
+
         }
-        
+
         w.drawScene();
 
 

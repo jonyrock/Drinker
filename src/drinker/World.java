@@ -14,7 +14,7 @@ public class World {
     public final int height;
     public final PrintStream stream;
 
-    // defaults obje
+    // defaults objects
     // cts
     final Pole pole;
     final Tavern tavern;
@@ -25,6 +25,7 @@ public class World {
     final BottleHouse bottleHouse;
 
     private ArrayList<WorldObject> movableObjects;
+    private ArrayList<Bottle> bottles;
     private ArrayList<WorldObject> worldObjects[][];
 
     protected WorldEvent onAddObjectEvent = new WorldEvent();
@@ -32,12 +33,13 @@ public class World {
     protected WorldEvent onPostTickEvent = new WorldEvent();
 
     @SuppressWarnings({"unchecked"})
-    public World(int width, int height, PrintStream stream) {
+    public World(PrintStream stream) {
 
-        this.width = width;
-        this.height = height;
+        this.width = 16;
+        this.height = 17;
         this.stream = stream;
         this.movableObjects = new ArrayList<WorldObject>();
+        this.bottles = new ArrayList<Bottle>();
 
 
         this.worldObjects = (ArrayList<WorldObject>[][])
@@ -54,8 +56,8 @@ public class World {
         lamp = new Lamp(7, 3);
         policeStation = new PoliceStation(15, 3);
         policeman = new Policeman(lamp, policeStation, policeStation.getX(), policeStation.getY());
-        beggar = new Beggar(16, 4);
-        bottleHouse = new BottleHouse(16, 4);
+        bottleHouse = new BottleHouse(4, 16);
+        beggar = new Beggar(bottleHouse, 4, 16);
 
         InitObjects();
 
@@ -145,6 +147,11 @@ public class World {
 
     public void addObject(WorldObject o) {
 
+        // if(o.inc)
+        if (o instanceof Bottle) {
+            bottles.add((Bottle) o);
+        }
+
         o.setWorld(this);
         if (o.isMovable())
             movableObjects.add(o);
@@ -174,6 +181,10 @@ public class World {
         if (worldObjects[o.getX()][o.getY()].contains(o)) {
             worldObjects[o.getX()][o.getY()].remove(o);
         }
+    }
+
+    public ArrayList<Bottle> getBottles() {
+        return bottles;
     }
 
     public Collection<WorldObject> getObjectAtXY(int x, int y) {

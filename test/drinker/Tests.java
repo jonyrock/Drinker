@@ -31,7 +31,7 @@ public class Tests {
             }
         });
 
-        world = new World(16, 16, printStream);
+        world = new World(printStream);
         wasMoveOnTick = false;
         pos03visited = false;
         testPositionsAttempts = 0;
@@ -50,11 +50,11 @@ public class Tests {
      * Test checks:
      * - illegal positions
      * - was visiting position (0, 3) at least one time
-     * - no one was at lamp position 
+     * - no one was at lamp position
      */
     @Test
     public void testPositions() {
-        
+
         // ground on bottom 
         for (int i = 0; i < 16; i++) {
             for (int j = 0; j < 16; j++) {
@@ -66,7 +66,7 @@ public class Tests {
                 });
             }
         }
-        
+
         worldStart();
         if (!pos03visited && testPositionsAttempts++ < 10) {
             initWorld();
@@ -159,10 +159,10 @@ public class Tests {
         worldStart();
 
     }
-    
+
     @Test
-    public void testAdded20Toper(){
-        
+    public void testAdded20Toper() {
+
         world.addPostTickEvent(new ObjectEventHandler() {
             public void onEvent(WorldObject o) {
                 tick++;
@@ -177,17 +177,17 @@ public class Tests {
                 }
             }
         });
-        
+
         worldStart();
-        
+
     }
-    
+
     @Test
-    public void testPolicemanToperMeet(){
-        
+    public void testPolicemanToperMeet() {
+
         world.policeman.addMutuallyCollisionHandler(new ObjectEventHandler() {
             public void onEvent(WorldObject o) {
-                if(o.getClass().equals(Toper.class)){
+                if (o.getClass().equals(Toper.class)) {
                     policeMetToper = true;
                 }
             }
@@ -199,7 +199,7 @@ public class Tests {
             initWorld();
             testPolicemanToperMeet();
         }
-        
+
     }
-    
+
 }

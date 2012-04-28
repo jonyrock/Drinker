@@ -38,7 +38,8 @@ public abstract class WorldObject {
 
     /**
      * object will be null
-     * @param e will 
+     *
+     * @param e will
      */
     public void addPreTickEvent(ObjectEventHandler e) {
         onPreTickEvent.add(e);

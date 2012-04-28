@@ -143,7 +143,7 @@ public class Toper extends WorldObject {
         if (!world.isPossibleForStep(x + xt, y)) {
             xt *= (-1);
         }
-        
+
         if (!world.isPossibleForStep(x, y + yt)) {
             yt *= (-1);
         }

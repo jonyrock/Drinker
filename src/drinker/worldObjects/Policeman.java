@@ -27,10 +27,9 @@ public class Policeman extends WorldObject {
         this.lamp = lamp;
 
 
-
     }
-    
-    public void bindToLamp(){
+
+    public void bindToLamp() {
         ObjectEventHandler ev = new ObjectEventHandler() {
 
             public void onEvent(WorldObject o) {
@@ -46,7 +45,7 @@ public class Policeman extends WorldObject {
             pl.addEnterHandler(ev);
         }
     }
-    
+
     @Override
     public void onTick() {
 
