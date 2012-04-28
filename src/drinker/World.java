@@ -14,9 +14,9 @@ public class World {
     public final int width;
     public final int height;
     public final PrintStream stream;
+    private List<Point2D> possibleDirections;
 
     // defaults objects
-    // cts
     final Pole pole;
     final Tavern tavern;
     final Lamp lamp;
@@ -45,6 +45,12 @@ public class World {
 
         this.worldObjects = (ArrayList<WorldObject>[][])
                 Array.newInstance(ArrayList.class, width, height);
+
+        possibleDirections = new ArrayList<Point2D>();
+        possibleDirections.add(new Point2D(0, 1));
+        possibleDirections.add(new Point2D(0, -1));
+        possibleDirections.add(new Point2D(1, 0));
+        possibleDirections.add(new Point2D(-1, 0));
 
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
@@ -278,32 +284,16 @@ public class World {
         while (!queue.isEmpty()) {
 
             Point2D next = queue.poll();
-
-            Point2D nextStep = new Point2D(0, 0);
-
-            nextStep.x = -1;
-            nextStep.y = 0;
-            if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
+            boolean foundWay = false;
+            for (Point2D nextStep : possibleDirections) {
+                if (foundWay = tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
+                    break;
+                }
+            }
+            if(foundWay){
                 break;
             }
 
-            nextStep.x = 1;
-            nextStep.y = 0;
-            if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
-                break;
-            }
-
-            nextStep.x = 0;
-            nextStep.y = 1;
-            if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
-                break;
-            }
-
-            nextStep.x = 0;
-            nextStep.y = -1;
-            if (tryAddToQueue(next, nextStep, finish, queue, prevMatrix)) {
-                break;
-            }
         }
 
         int nextPrevX = finish.getX();
@@ -334,6 +324,15 @@ public class World {
 
     }
 
+    /**
+     * 
+     * @param current position
+     * @param step direction to near position
+     * @param finish destination object
+     * @param queue to add explored positions
+     * @param prevMatrix to add prev 
+     * @return true if found way
+     */
     private boolean tryAddToQueue(Point2D current,
                                   Point2D step,
                                   WorldObject finish,
@@ -362,5 +361,6 @@ public class World {
     public boolean isPossibleForStep(int x, int y) {
         return !(x >= width - 1 || x < 0 || y >= height - 1 || y < 1);
     }
+
 
 }

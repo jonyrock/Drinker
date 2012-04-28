@@ -12,12 +12,12 @@ public class Beggar extends WorldObject {
     private final BottleHouse bottleHouse;
     private boolean isWithBottle;
     private Bottle bottle;
+    int waitTime = 0;
 
     public Beggar(BottleHouse bottleHouse, int x, int y) {
         super(x, y);
         this.bottleHouse = bottleHouse;
         isWithBottle = false;
-
     }
 
     @Override
@@ -27,6 +27,11 @@ public class Beggar extends WorldObject {
 
     @Override
     public void onTick() {
+
+        if (!isWithBottle && waitTime != 40) {
+            waitTime++;
+            return;
+        }
 
         if (isWithBottle) {
             homeCase();
@@ -47,6 +52,7 @@ public class Beggar extends WorldObject {
 
         if (direction.isZero()) {
             isWithBottle = false;
+            waitTime = 0;
             return;
         }
 
