@@ -38,8 +38,8 @@ public class Beggar extends WorldObject {
 
     void homeCase() {
 
-        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, bottle);
-        if(pair == null){
+        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, bottleHouse);
+        if (pair == null) {
             return;
         }
 
@@ -47,15 +47,16 @@ public class Beggar extends WorldObject {
 
         if (direction.isZero()) {
             isWithBottle = false;
+            return;
         }
-        
+
         world.removeObject(bottle);
         super.x += direction.x;
         super.y += direction.y;
         bottle.setX(super.x);
         bottle.setY(super.y);
         world.addObject(bottle);
-        
+
     }
 
     void newBottleCase() {
@@ -86,7 +87,7 @@ public class Beggar extends WorldObject {
         if (dir == null) {
             return;
         }
-        
+
         super.x += dir.x;
         super.y += dir.y;
 

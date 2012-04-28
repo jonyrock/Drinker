@@ -10,7 +10,7 @@ public class BottleHouse extends WorldObject {
 
     @Override
     public char draw() {
-        return 'B';
+        return 'C';
     }
 
 }
