@@ -1,6 +1,7 @@
 package drinker;
 
 import drinker.utils.ObjectEventHandler;
+import drinker.utils.Pair;
 import drinker.utils.WorldEvent;
 import drinker.worldObjects.*;
 
@@ -255,11 +256,11 @@ public class World {
 
     }
 
-    public Point2D findDirectionOnClosestPath(
+    public Pair<Point2D, Integer> findDirectionOnClosestPath(
             WorldObject start, WorldObject finish) {
 
         if (start.isSameLocation(finish))
-            return new Point2D(0, 0);
+            return new Pair<Point2D, Integer>(new Point2D(0, 0), 0);
 
 
         Queue<Point2D> queue = new
@@ -309,23 +310,26 @@ public class World {
         int nextPrevY = finish.getY();
 
         Point2D prevPoint = new Point2D();
+        int dist = 0;
+
+        if (prevMatrix[nextPrevX][nextPrevY] == null) {
+            return null;
+        }
 
         while (!(nextPrevX == start.getX() && nextPrevY == start.getY())) {
-
-            if (prevMatrix[nextPrevX][nextPrevY] == null)
-                return null;
 
             prevPoint.x = nextPrevX;
             prevPoint.y = nextPrevY;
 
             nextPrevX = prevMatrix[prevPoint.x][prevPoint.y].x;
             nextPrevY = prevMatrix[prevPoint.x][prevPoint.y].y;
+            dist++;
 
 
         }
 
-        return new Point2D(prevPoint.x - start.getX(),
-                prevPoint.y - start.getY());
+        return new Pair<Point2D, Integer>(new Point2D(prevPoint.x - start.getX(),
+                prevPoint.y - start.getY()), dist);
 
 
     }

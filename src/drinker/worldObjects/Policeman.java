@@ -3,6 +3,7 @@ package drinker.worldObjects;
 import drinker.utils.ObjectEventHandler;
 import drinker.Point2D;
 import drinker.WorldObject;
+import drinker.utils.Pair;
 
 import java.util.ArrayDeque;
 import java.util.Collection;
@@ -64,12 +65,14 @@ public class Policeman extends WorldObject {
 
     private void stepToHome() {
 
-        Point2D direction = world.findDirectionOnClosestPath(this, policeStation);
+        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, policeStation);
 
-        if (direction == null) {
+        if (pair == null) {
             return;
         }
 
+        Point2D direction = pair.first;
+        
         if (direction.isZero()) {
             busy = false;
             currentTarget = null;
@@ -87,12 +90,14 @@ public class Policeman extends WorldObject {
             currentTarget = targets.poll();
         }
 
-        Point2D direction = world.findDirectionOnClosestPath(this, currentTarget);
+        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, currentTarget);
 
-        if (direction == null) {
+        if (pair == null) {
             return;
         }
-
+        
+        Point2D direction = pair.first;
+        
         if (direction.isZero()) {
             busy = true;
             world.removeObject(currentTarget);
