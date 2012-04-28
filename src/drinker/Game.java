@@ -2,9 +2,9 @@ package drinker;
 
 public class Game {
 
-    public Game(int count) {
+    public Game(boolean isHex, int count) {
 
-        World w = new World(true, System.out);
+        World w = new World(isHex, System.out);
 
 
         for (int i = 0; i < count; i++) {

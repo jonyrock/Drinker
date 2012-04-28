@@ -14,8 +14,14 @@ public class Main {
      * @param args input (and output) file paths
      */
     public static void main(String[] args) {
-
-        new Game(1000);
+        
+        boolean isHex= false;
+        if(args.length > 1){
+            if(args[0].toLowerCase().equals("h")){
+                isHex = true;
+            }
+        }
+        new Game(true, 1000);
 //        Game g2 = new Game(300);
 //        Game g3 = new Game(500);
 

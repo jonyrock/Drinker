@@ -51,7 +51,7 @@ public class World {
         possibleDirections.add(new Point2D(0, -1));
         possibleDirections.add(new Point2D(1, 0));
         possibleDirections.add(new Point2D(-1, 0));
-        if(isHex){
+        if (isHex) {
             possibleDirections.add(new Point2D(1, 1));
             possibleDirections.add(new Point2D(1, -1));
             possibleDirections.add(new Point2D(-1, 1));
@@ -159,12 +159,13 @@ public class World {
 
     /**
      * Get possible directions for field
+     *
      * @return unmodifiable collection
      */
-    public Collection<Point2D> getDirections(){
-        
+    public Collection<Point2D> getDirections() {
+
         return Collections.unmodifiableCollection(possibleDirections);
-        
+
     }
 
     public void addObject(WorldObject o) {
@@ -305,7 +306,7 @@ public class World {
                     break;
                 }
             }
-            if(foundWay){
+            if (foundWay) {
                 break;
             }
 
@@ -341,11 +342,12 @@ public class World {
 
     /**
      * Adds new position if it's new and possible
-     * @param current position
-     * @param step direction to near position
-     * @param finish destination object
-     * @param queue to add explored positions
-     * @param prevMatrix to add prev 
+     *
+     * @param current    position
+     * @param step       direction to near position
+     * @param finish     destination object
+     * @param queue      to add explored positions
+     * @param prevMatrix to add prev
      * @return true if found way
      */
     private boolean tryAddToQueue(Point2D current,
@@ -374,6 +376,16 @@ public class World {
     }
 
     public boolean isPossibleForStep(int x, int y) {
+
+        Collection<WorldObject> collection = this.getObjectAtXY(x, y);
+        if (collection != null) {
+            if (collection.size() == 1) {
+                if (collection.iterator().next() instanceof FieldBorder) {
+                    return false;
+                }
+            }
+        }
+
         return !(x >= width - 1 || x < 0 || y >= height - 1 || y < 1);
     }
 

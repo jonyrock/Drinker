@@ -7,8 +7,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drinker/Game.java" afterPath="$PROJECT_DIR$/src/drinker/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drinker/Main.java" afterPath="$PROJECT_DIR$/src/drinker/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drinker/World.java" afterPath="$PROJECT_DIR$/src/drinker/World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drinker/worldObjects/Toper.java" afterPath="$PROJECT_DIR$/src/drinker/worldObjects/Toper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/drinker/Tests.java" afterPath="$PROJECT_DIR$/test/drinker/Tests.java" />
     </list>
     <ignored path="Drinker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,7 +67,7 @@
       <file leaf-file-name="Beggar.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Beggar.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+            <state line="47" column="19" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#Beggar#0;class#Beggar#0" expanded="false" />
                 <element signature="method#draw#0;class#Beggar#0" expanded="false" />
@@ -84,10 +82,10 @@
       <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/drinker/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="43" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0">
+            <state line="383" column="33" selection-start="9912" selection-end="9912" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#949#981#0" expanded="true" />
-                <element signature="method#InitObjects#0;class#World#0" expanded="false" />
+                <element signature="method#World#0;class#World#0" expanded="false" />
                 <element signature="method#tick#0;class#World#0" expanded="false" />
                 <element signature="method#drawScene#0;class#World#0" expanded="false" />
                 <element signature="docComment;method#getDirections#0;class#World#0" expanded="false" />
@@ -101,29 +99,81 @@
                 <element signature="method#getObjectAtXY#0;class#World#0" expanded="false" />
                 <element signature="method#addToper#0;class#World#0" expanded="false" />
                 <element signature="method#tickObject#0;class#World#0" expanded="false" />
-                <element signature="docComment;method#isTakePlace#0;class#World#0" expanded="false" />
-                <element signature="method#isTakePlace#0;class#World#0" expanded="false" />
+                <element signature="method#findDirectionOnClosestPath#0;class#World#0" expanded="false" />
                 <element signature="docComment;method#tryAddToQueue#0;class#World#0" expanded="false" />
                 <element signature="method#tryAddToQueue#0;class#World#0" expanded="false" />
-                <element signature="method#isPossibleForStep#0;class#World#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tasks3hex.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
+      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/drinker/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="67" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+            <state line="6" column="33" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Game.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/drinker/Game.java">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/drinker/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="27" selection-start="382" selection-end="382" vertical-scroll-proportion="0.31688598">
+            <state line="15" column="26" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldObject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/drinker/WorldObject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#WorldObject#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addEnterHandler#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addPostTickEvent#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#getX#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#setX#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#getY#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#setY#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onTick#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onCollision#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onEnter#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#setWorld#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isSuspended#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isMovable#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isReasonToStop#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isSuspendAble#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isNeedPoliceHelp#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isSameLocation#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#mutuallyCollision#0;class#WorldObject#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FieldBorder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/FieldBorder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="19" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tasks3hex.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.01864035">
               <folding />
             </state>
           </provider>
@@ -154,11 +204,11 @@
         <option value="$PROJECT_DIR$/src/drinker/WorldObject.java" />
         <option value="$PROJECT_DIR$/src/drinker/worldObjects/Beggar.java" />
         <option value="$PROJECT_DIR$/src/drinker/worldObjects/BottleHouse.java" />
-        <option value="$PROJECT_DIR$/src/drinker/Main.java" />
         <option value="$PROJECT_DIR$/src/drinker/worldObjects/Toper.java" />
+        <option value="$PROJECT_DIR$/test/drinker/Tests.java" />
         <option value="$PROJECT_DIR$/src/drinker/World.java" />
         <option value="$PROJECT_DIR$/src/drinker/Game.java" />
-        <option value="$PROJECT_DIR$/test/drinker/Tests.java" />
+        <option value="$PROJECT_DIR$/src/drinker/Main.java" />
         <option value="$PROJECT_DIR$/docs/Tasks3hex.txt" />
       </list>
     </option>
@@ -606,7 +656,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="PossibleDirections list and findDirectionOnClosestPath fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="HexField basics&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -629,6 +679,7 @@
     <MESSAGE value="Beggar movement" />
     <MESSAGE value="Beggar movement fix" />
     <MESSAGE value="PossibleDirections list and findDirectionOnClosestPath fix" />
+    <MESSAGE value="HexField basics&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -638,46 +689,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Lamp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="61" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Policeman.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="9" selection-start="1721" selection-end="1721" vertical-scroll-proportion="0.50986844">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/drinker/WorldObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="5" selection-start="1190" selection-end="1190" vertical-scroll-proportion="0.31907895">
-          <folding>
-            <element signature="method#WorldObject#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#addEnterHandler#0;class#WorldObject#0" expanded="false" />
-            <element signature="docComment;method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
-            <element signature="docComment;method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#addPostTickEvent#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#getY#0;class#WorldObject#0" expanded="false" />
-            <element signature="docComment;method#onWorldTick#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#onWorldTick#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#onTick#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#onCollision#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#onEnter#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#setWorld#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isSuspended#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isMovable#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isReasonToStop#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isSuspendAble#0;class#WorldObject#0" expanded="false" />
-            <element signature="docComment;method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isNeedPoliceHelp#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#isSameLocation#0;class#WorldObject#0" expanded="false" />
-            <element signature="method#mutuallyCollision#0;class#WorldObject#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -730,18 +745,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/drinker/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="4" selection-start="374" selection-end="374" vertical-scroll-proportion="0.42872807">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Toper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="474" selection-end="474" vertical-scroll-proportion="0.2982456">
+        <state line="18" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.24232456">
           <folding>
-            <element signature="method#Toper#0;class#Toper#0" expanded="false" />
             <element signature="method#draw#0;class#Toper#0" expanded="false" />
             <element signature="method#onTick#0;class#Toper#0" expanded="false" />
             <element signature="method#isSuspended#0;class#Toper#0" expanded="false" />
@@ -758,7 +765,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Beggar.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+        <state line="47" column="19" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="method#Beggar#0;class#Beggar#0" expanded="false" />
             <element signature="method#draw#0;class#Beggar#0" expanded="false" />
@@ -769,19 +776,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
+    <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/FieldBorder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="67" selection-start="656" selection-end="656" vertical-scroll-proportion="0.0">
+        <state line="18" column="19" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/drinker/WorldObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#WorldObject#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addEnterHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addPostTickEvent#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#getX#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setX#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#getY#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setY#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onCollision#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onEnter#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setWorld#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSuspended#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isMovable#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isReasonToStop#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isNeedPoliceHelp#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSameLocation#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#mutuallyCollision#0;class#WorldObject#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="43" selection-start="1843" selection-end="1843" vertical-scroll-proportion="0.0">
+        <state line="383" column="33" selection-start="9912" selection-end="9912" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#949#981#0" expanded="true" />
-            <element signature="method#InitObjects#0;class#World#0" expanded="false" />
+            <element signature="method#World#0;class#World#0" expanded="false" />
             <element signature="method#tick#0;class#World#0" expanded="false" />
             <element signature="method#drawScene#0;class#World#0" expanded="false" />
             <element signature="docComment;method#getDirections#0;class#World#0" expanded="false" />
@@ -795,18 +836,30 @@
             <element signature="method#getObjectAtXY#0;class#World#0" expanded="false" />
             <element signature="method#addToper#0;class#World#0" expanded="false" />
             <element signature="method#tickObject#0;class#World#0" expanded="false" />
-            <element signature="docComment;method#isTakePlace#0;class#World#0" expanded="false" />
-            <element signature="method#isTakePlace#0;class#World#0" expanded="false" />
+            <element signature="method#findDirectionOnClosestPath#0;class#World#0" expanded="false" />
             <element signature="docComment;method#tryAddToQueue#0;class#World#0" expanded="false" />
             <element signature="method#tryAddToQueue#0;class#World#0" expanded="false" />
-            <element signature="method#isPossibleForStep#0;class#World#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="27" selection-start="382" selection-end="382" vertical-scroll-proportion="0.31688598">
+        <state line="6" column="33" selection-start="117" selection-end="117" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/drinker/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="26" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="15" selection-end="15" vertical-scroll-proportion="0.01864035">
           <folding />
         </state>
       </provider>
