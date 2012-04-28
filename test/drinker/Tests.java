@@ -31,7 +31,7 @@ public class Tests {
             }
         });
 
-        world = new World(printStream);
+        world = new World(false, printStream);
         wasMoveOnTick = false;
         pos03visited = false;
         testPositionsAttempts = 0;

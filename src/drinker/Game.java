@@ -4,7 +4,7 @@ public class Game {
 
     public Game(int count) {
 
-        World w = new World(System.out);
+        World w = new World(true, System.out);
 
 
         for (int i = 0; i < count; i++) {

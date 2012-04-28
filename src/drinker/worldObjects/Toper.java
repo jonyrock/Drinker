@@ -1,9 +1,11 @@
 package drinker.worldObjects;
 
 import drinker.Point2D;
+import drinker.World;
 import drinker.WorldObject;
 
 import java.util.Collection;
+import java.util.Random;
 
 public class Toper extends WorldObject {
 
@@ -15,8 +17,15 @@ public class Toper extends WorldObject {
     private boolean suspended;
     private boolean hasBottle;
 
-    public Toper(int x, int y) {
+    private final World world;
+    private final Point2D[] dirs;
+
+    public Toper(World world, int x, int y) {
+
         super(x, y);
+
+        this.world = world;
+        this.dirs = world.getDirections().toArray(new Point2D[world.getDirections().size()]);
 
         fellAsleep = false;
         suspended = false;
@@ -122,23 +131,12 @@ public class Toper extends WorldObject {
 
     private Point2D getNewDirection() {
 
-        int r = ((int) (Math.random() * 10)) % 4;
 
-        int xt = 0;
-        int yt = 0;
+        int r = new Random().nextInt(dirs.length);
 
-        if (r == 0) {
-            xt = 1;
-        }
-        if (r == 1) {
-            xt = -1;
-        }
-        if (r == 2) {
-            yt = 1;
-        }
-        if (r == 3) {
-            xt = -1;
-        }
+        int xt = dirs[r].x;
+        int yt = dirs[r].y;
+
 
         if (!world.isPossibleForStep(x + xt, y)) {
             xt *= (-1);

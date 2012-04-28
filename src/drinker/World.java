@@ -34,7 +34,7 @@ public class World {
     protected WorldEvent onPostTickEvent = new WorldEvent();
 
     @SuppressWarnings({"unchecked"})
-    public World(PrintStream stream) {
+    public World(boolean isHex, PrintStream stream) {
 
         this.width = 16;
         this.height = 17;
@@ -51,6 +51,12 @@ public class World {
         possibleDirections.add(new Point2D(0, -1));
         possibleDirections.add(new Point2D(1, 0));
         possibleDirections.add(new Point2D(-1, 0));
+        if(isHex){
+            possibleDirections.add(new Point2D(1, 1));
+            possibleDirections.add(new Point2D(1, -1));
+            possibleDirections.add(new Point2D(-1, 1));
+            possibleDirections.add(new Point2D(-1, -1));
+        }
 
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
@@ -151,6 +157,15 @@ public class World {
 
     }
 
+    /**
+     * Get possible directions for field
+     * @return unmodifiable collection
+     */
+    public Collection<Point2D> getDirections(){
+        
+        return Collections.unmodifiableCollection(possibleDirections);
+        
+    }
 
     public void addObject(WorldObject o) {
 
@@ -208,7 +223,7 @@ public class World {
 
 
     private void addToper() {
-        addObject(new Toper(9, 1));
+        addObject(new Toper(this, 9, 1));
     }
 
     private void tickObject(WorldObject o) {
@@ -325,7 +340,7 @@ public class World {
     }
 
     /**
-     * 
+     * Adds new position if it's new and possible
      * @param current position
      * @param step direction to near position
      * @param finish destination object
