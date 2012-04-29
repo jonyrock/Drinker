@@ -1,4 +1,4 @@
-package drinker.worldObjects;
+package main.java.drinker.worldObjects;
 
 public interface DirectionGenerator {
 

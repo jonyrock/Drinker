@@ -1,7 +1,7 @@
-package drinker;
+package main.java.drinker;
 
-import drinker.utils.ObjectEventHandler;
-import drinker.utils.WorldEvent;
+import main.java.drinker.utils.ObjectEventHandler;
+import main.java.drinker.utils.WorldEvent;
 
 public abstract class WorldObject {
 
@@ -10,7 +10,7 @@ public abstract class WorldObject {
     protected int y;
 
     protected WorldEvent onEnterEvent = new WorldEvent();
-    protected WorldEvent onMutuallyCollisionEvent = new WorldEvent();
+    public WorldEvent onMutuallyCollisionEvent = new WorldEvent();
     protected WorldEvent onPreTickEvent = new WorldEvent();
     protected WorldEvent onPostTickEvent = new WorldEvent();
 

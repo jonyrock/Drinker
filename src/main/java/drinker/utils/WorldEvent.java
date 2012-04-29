@@ -1,6 +1,6 @@
-package drinker.utils;
+package main.java.drinker.utils;
 
-import drinker.WorldObject;
+import main.java.drinker.WorldObject;
 
 import java.util.ArrayDeque;
 

@@ -1,43 +1,43 @@
 ---------
 --Fixed--
 ---------
-01. drinker.Point2D#isEqual, drinker.Pair#isEqual - в java есть стандартный equals(), 
+01. Point2D#isEqual, drinker.Pair#isEqual - в java есть стандартный equals(), 
     который используют map'ы, set'ы и др., надо использовать его
-03. drinker.WorldObject#MutuallyCollision - вроде все функции с lowercase пишем. 
+03. WorldObject#MutuallyCollision - вроде все функции с lowercase пишем. 
     Неясно, зачем статика, почему не сделать методом класса
-04. drinker.WorldObject#drawDefault - странно, что в ответственность объекта входит знать что-то про 
+04. WorldObject#drawDefault - странно, что в ответственность объекта входит знать что-то про 
     отрисовку пустого поля карты. Не место этому тут.
-05. drinker.WorldObject#draw - странная реализация по умолчанию. Верный признак того, что drinker.WorldObject 
+05. WorldObject#draw - странная реализация по умолчанию. Верный признак того, что WorldObject 
     должен быть абстрактным.
-07. drinker.WorldObject#isLatencySuspendAble, drinker.WorldObject#isNeedPoliceHelp - что означают? 
+07. WorldObject#isLatencySuspendAble, WorldObject#isNeedPoliceHelp - что означают? 
     Или неудачные названия, или не хватает java doc'ов.     
-08. drinker.WorldObject#isTakePlace - странно, что объект может не занимать места. 
+08. WorldObject#isTakePlace - странно, что объект может не занимать места. 
     Также странно, что освещенное место является объектом. Такие несуразицы говорят о проблемах в дизайне.
 Это свойсво было необходимо для поиска пути поличейского. Если предмет занимает место, то идти туда нельзя.
 Было заменено на проверку того, может ли пьяница там пройти. 
 Освещенное место было убрано. Теперь приложение тратит памяти еще O(n).
 
-10. drinker.worldObjects.Toper#suspended - этот флаг вообще нужен? Есть ощущение, что нет.
+10. Toper#suspended - этот флаг вообще нужен? Есть ощущение, что нет.
 Был добавлен комментарий. 
 
-11. drinker.worldObjects.Toper#tryDropBottle - if(r != 13) - забавно, но вопрос, почему 13, остается. 
+11. Toper#tryDropBottle - if(r != 13) - забавно, но вопрос, почему 13, остается. 
     Это классический Magic number, оставляющий читателя чесать репу. Либо комментарий, лучше - константа.
 Потому что любое число в диапозоне равновероятно. Однако комментарий был добавлен.
 
-12. drinker.worldObjects.Toper#getNewDirection - логика, не выйдем ли за пределы поля, оказывается у пьяницы. 
+12. Toper#getNewDirection - логика, не выйдем ли за пределы поля, оказывается у пьяницы. 
     Ожидаю copypast'ов для других персонажей и проблем при добавлении полей с другой топологией.  
 Перенесено в логику World как метод World::isPossibleForStep
 
 ---------
 -Ignored-
 ---------
-02. drinker.Point2D#clone - разумнее вызвать super.clone(), раз тебе достаточно shallow copy
+02. Point2D#clone - разумнее вызвать super.clone(), раз тебе достаточно shallow copy
 Мне не нравиться реализация clone в java.
 http://stackoverflow.com/questions/5430944/java-clone-operation-calling-super-clone
-Поэтому я переименовал метод в drinker.Point2D#copy чтобы никого не смущать
+Поэтому я переименовал метод в Point2D#copy чтобы никого не смущать
 
-06. drinker.WorldObject#isMovable, drinker.WorldObject#isStopAble, 
-    drinker.WorldObject#isSuspendAble, ... - говорят о том, что при добавлении нового свойства 
+06. WorldObject#isMovable, WorldObject#isStopAble, 
+    WorldObject#isSuspendAble, ... - говорят о том, что при добавлении нового свойства 
     поведения базовый класс придется менять. Это плохо, потому что потребует полной перекомпиляции 
     проекта и вредит расширяемости. При достаточно большом количестве свойств класс превратится в 
     монстра и потеряет читаемость.
@@ -46,7 +46,7 @@ http://stackoverflow.com/questions/5430944/java-clone-operation-calling-super-cl
 Если этот класс будет упакован в библиотеку, то будет использоватся обычное наследование 
 для создания нового уровня абстракции 
 
-09. drinker.worldObjects.Toper#fellAsleep, drinker.worldObjects.Toper#fellAsleepDown - могут 
+09. Toper#fellAsleep, Toper#fellAsleepDown - могут 
     быть true одновременно? Два флага на state многовато. Почему не обойтись одним enum'ом?
 Это два разных абстрактных свойства объекта - enum здесь не поможет.
 
@@ -54,14 +54,14 @@ http://stackoverflow.com/questions/5430944/java-clone-operation-calling-super-cl
 ---------
 --Info---
 ---------
-14. Какая разница между объектами в drinker.World#movableObjects и в drinker.World#worldObjects? 
-    Из названия она есть. drinker.World#addObject добавляет объект в обе структуры, что настораживает.
+14. Какая разница между объектами в World#movableObjects и в World#worldObjects? 
+    Из названия она есть. World#addObject добавляет объект в обе структуры, что настораживает.
 Хороший вопрос. Разница в том, что первая структура используется для выполнения опещения tick(), 
 а вторая для поиска за O(1).
 
-13. Каким образом изменянтся положение пьяницы в drinker.World#worldObjects?
+13. Каким образом изменянтся положение пьяницы в World#worldObjects?
 Проверятся положение объекта после каждого "тника". Если положение изменилось, 
-то изменяется drinker.World#worldObjects.
+то изменяется World#worldObjects.
 
 ... Я бы предложил выделить основные сущности игры и четко прописать их ответственности. 
     Нарисовать для каждой интерфейс, а потом перейти к реализации.

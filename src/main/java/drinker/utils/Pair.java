@@ -1,4 +1,4 @@
-package drinker.utils;
+package main.java.drinker.utils;
 
 public class Pair<T, E> {
     public T first;

@@ -1,8 +1,8 @@
-package drinker.worldObjects;
+package main.java.drinker.worldObjects;
 
-import drinker.Point2D;
-import drinker.World;
-import drinker.WorldObject;
+import main.java.drinker.WorldObject;
+import main.java.drinker.Point2D;
+import main.java.drinker.World;
 
 import java.util.Collection;
 import java.util.Random;

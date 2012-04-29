@@ -1,6 +1,6 @@
-package drinker.worldObjects;
+package main.java.drinker.worldObjects;
 
-import drinker.WorldObject;
+import main.java.drinker.WorldObject;
 
 public class Bottle extends WorldObject {
 

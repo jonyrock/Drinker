@@ -1,6 +1,6 @@
-package drinker.worldObjects;
+package main.java.drinker.worldObjects;
 
-import drinker.WorldObject;
+import main.java.drinker.WorldObject;
 
 import java.util.ArrayList;
 import java.util.Collection;
