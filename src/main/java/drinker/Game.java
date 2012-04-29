@@ -1,4 +1,4 @@
-package main.java.drinker;
+package drinker;
 
 public class Game {
 

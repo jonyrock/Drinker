@@ -1,7 +1,7 @@
-package main.java.drinker;
+package drinker;
 
-import main.java.drinker.utils.ObjectEventHandler;
-import main.java.drinker.utils.WorldEvent;
+import drinker.utils.ObjectEventHandler;
+import drinker.utils.WorldEvent;
 
 public abstract class WorldObject {
 

@@ -1,8 +1,8 @@
-package main.java.drinker.worldObjects;
+package drinker.worldObjects;
 
-import main.java.drinker.Point2D;
-import main.java.drinker.WorldObject;
-import main.java.drinker.utils.Pair;
+import drinker.Point2D;
+import drinker.WorldObject;
+import drinker.utils.Pair;
 
 import java.util.ArrayList;
 

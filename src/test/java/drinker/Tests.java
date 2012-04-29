@@ -1,13 +1,13 @@
-package test.java.drinker;
+package drinker;
 
 
-import main.java.drinker.World;
-import main.java.drinker.WorldObject;
-import main.java.drinker.utils.WorldEvent;
-import main.java.drinker.worldObjects.Beggar;
-import main.java.drinker.worldObjects.Bottle;
-import main.java.drinker.worldObjects.BottleHouse;
-import main.java.drinker.worldObjects.Toper;
+import drinker.World;
+import drinker.WorldObject;
+import drinker.utils.WorldEvent;
+import drinker.worldObjects.Beggar;
+import drinker.worldObjects.Bottle;
+import drinker.worldObjects.BottleHouse;
+import drinker.worldObjects.Toper;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

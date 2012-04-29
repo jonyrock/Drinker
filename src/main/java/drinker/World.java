@@ -1,9 +1,9 @@
-package main.java.drinker;
+package drinker;
 
-import main.java.drinker.utils.ObjectEventHandler;
-import main.java.drinker.utils.Pair;
-import main.java.drinker.utils.WorldEvent;
-import main.java.drinker.worldObjects.*;
+import drinker.utils.ObjectEventHandler;
+import drinker.utils.Pair;
+import drinker.utils.WorldEvent;
+import drinker.worldObjects.*;
 
 import java.io.PrintStream;
 import java.lang.reflect.Array;

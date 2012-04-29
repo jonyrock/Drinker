@@ -1,6 +1,6 @@
-package main.java.drinker.utils;
+package drinker.utils;
 
-import main.java.drinker.WorldObject;
+import drinker.WorldObject;
 
 public interface ObjectEventHandler {
 
