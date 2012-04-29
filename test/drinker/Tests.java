@@ -7,6 +7,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import org.mockito.*;
+import static org.mockito.Mockito.*;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -24,13 +27,7 @@ public class Tests {
 
     @Before
     public void initWorld() {
-        PrintStream printStream = new PrintStream(new OutputStream() {
-            @Override
-            public void write(int i) throws IOException {
-
-            }
-        });
-
+        PrintStream printStream = mock(PrintStream.class);
         world = new World(false, printStream);
         wasMoveOnTick = false;
         pos03visited = false;

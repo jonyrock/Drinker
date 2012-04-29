@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="Impossible positions fix&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/mockito-all-1.9.0.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mockito_all_1_9_0.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drinker.iml" afterPath="$PROJECT_DIR$/Drinker.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Tasks3hex.txt" afterPath="$PROJECT_DIR$/docs/Tasks3hex.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/drinker/Tests.java" afterPath="$PROJECT_DIR$/test/drinker/Tests.java" />
     </list>
     <ignored path="Drinker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -100,11 +98,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WorldObject.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="WorldObject.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/drinker/WorldObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="11" column="48" selection-start="248" selection-end="248" vertical-scroll-proportion="0.28333333">
+              <folding>
+                <element signature="method#WorldObject#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addEnterHandler#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#addPostTickEvent#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#getX#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#setX#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#getY#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#setY#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onTick#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onCollision#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#onEnter#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#setWorld#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isSuspended#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isMovable#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isReasonToStop#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isSuspendAble#0;class#WorldObject#0" expanded="false" />
+                <element signature="docComment;method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isNeedPoliceHelp#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#isSameLocation#0;class#WorldObject#0" expanded="false" />
+                <element signature="method#mutuallyCollision#0;class#WorldObject#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,7 +137,7 @@
       <file leaf-file-name="FieldBorder.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/FieldBorder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="19" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+            <state line="11" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,19 +146,17 @@
       <file leaf-file-name="Tasks3hex.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="59" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+            <state line="13" column="67" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tests.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Tests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/drinker/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="20" selection-start="310" selection-end="310" vertical-scroll-proportion="0.24232456">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="12" column="27" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,16 +190,15 @@
         <option value="$PROJECT_DIR$/src/drinker/World.java" />
         <option value="$PROJECT_DIR$/src/drinker/Game.java" />
         <option value="$PROJECT_DIR$/src/drinker/Main.java" />
-        <option value="$PROJECT_DIR$/docs/Tasks3hex.txt" />
         <option value="$PROJECT_DIR$/test/drinker/Tests.java" />
+        <option value="$PROJECT_DIR$/docs/Tasks3hex.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="-5" />
-    <option name="width" value="1922" />
-    <option name="height" value="1086" />
+    <option name="width" value="1368" />
+    <option name="height" value="774" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -268,21 +290,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Drinker">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,19 +374,34 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Drinker">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="72" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="94" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="100" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1006" />
@@ -400,8 +422,8 @@
     <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -577,13 +599,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-5" width="1922" height="1086" extended-state="6" />
+    <frame x="0" y="-5" width="1368" height="774" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.46162048" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4600639" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -592,7 +614,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.116987176" sideWeight="0.67164177" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19878604" sideWeight="0.5399361" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -704,6 +726,13 @@
         <state line="18" column="0" selection-start="408" selection-end="408" vertical-scroll-proportion="0.24232456" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Tasks1basics.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/Beggar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="19" selection-start="979" selection-end="979" vertical-scroll-proportion="0.0" />
@@ -724,35 +753,57 @@
         <state line="15" column="26" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/drinker/WorldObject.java">
+    <entry file="file://$PROJECT_DIR$/test/drinker/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="0" selection-start="1356" selection-end="1356" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/FieldBorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="19" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" />
+        <state line="12" column="27" selection-start="291" selection-end="291" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="59" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+        <state line="13" column="67" selection-start="511" selection-end="511" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Tasks1basics.txt">
+    <entry file="file://$PROJECT_DIR$/src/drinker/worldObjects/FieldBorder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="11" column="0" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/drinker/Tests.java">
+    <entry file="file://$PROJECT_DIR$/src/drinker/WorldObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="20" selection-start="310" selection-end="310" vertical-scroll-proportion="0.24232456">
+        <state line="11" column="48" selection-start="248" selection-end="248" vertical-scroll-proportion="0.28333333">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#WorldObject#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addEnterHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addMutuallyCollisionHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addPreTickEvent#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addPostTickEvent#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#getX#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setX#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#getY#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setY#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onCollision#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onEnter#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setWorld#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSuspended#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isMovable#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isReasonToStop#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isNeedPoliceHelp#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSameLocation#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#mutuallyCollision#0;class#WorldObject#0" expanded="false" />
           </folding>
         </state>
       </provider>
