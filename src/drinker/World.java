@@ -389,5 +389,20 @@ public class World {
         return !(x >= width - 1 || x < 0 || y >= height - 1 || y < 1);
     }
 
+    public boolean isPossibleForStep(Point2D point) {
+        return isPossibleForStep(point.x, point.y);
+    }
+
+    /**
+     * Translates coordinates from task to real field coordinates
+     * @param x 
+     * @param y
+     * @return
+     */
+    public static Point2D fromYXtoWorldFieldCoordinates(int y, int x) {
+
+        return new Point2D(x, y + 1);
+
+    }
 
 }
