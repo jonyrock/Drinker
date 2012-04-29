@@ -269,7 +269,7 @@ public class World {
         }
 
         for (WorldObject w : collection) {
-            if (w.isReasonToStop() || w.isSuspendAble()) {
+            if (w.isReasonToStopToper() || w.isSuspendAble()) {
                 return true;
             }
         }

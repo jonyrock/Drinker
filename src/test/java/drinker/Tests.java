@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 import static org.mockito.Mockito.*;
 
-public class TestsNew {
+public class Tests {
         
     
     private World world;

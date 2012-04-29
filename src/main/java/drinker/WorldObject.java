@@ -99,7 +99,7 @@ public abstract class WorldObject {
         return false;
     }
 
-    public boolean isReasonToStop() {
+    public boolean isReasonToStopToper() {
         return false;
     }
 

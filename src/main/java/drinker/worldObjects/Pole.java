@@ -14,7 +14,7 @@ public class Pole extends WorldObject {
     }
 
     @Override
-    public boolean isReasonToStop() {
+    public boolean isReasonToStopToper() {
         return true;
     }
 
