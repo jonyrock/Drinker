@@ -365,7 +365,8 @@ public class World {
         }
 
 
-        if (!isTakePlace(newX, newY) && prevMatrix[newX][newY] == null) {
+        if (isPossibleForStep(newX, newY) && !isTakePlace(newX, newY) 
+                && prevMatrix[newX][newY] == null) {
             queue.add(new Point2D(newX, newY));
             prevMatrix[newX][newY] = current.copy();
         }
