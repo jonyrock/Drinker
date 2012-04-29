@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-public class Tests {
+public class TestsOld {
 
     private World world;
     private boolean pos03visited;
