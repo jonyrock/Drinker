@@ -1,7 +1,7 @@
 package drinker;
 
-import drinker.utils.ObjectEventHandler;
-import drinker.utils.WorldEvent;
+import drinker.utils.CollisionSubject;
+import drinker.utils.CollisionObserver;
 
 public abstract class WorldObject {
 
@@ -9,8 +9,8 @@ public abstract class WorldObject {
     protected int x;
     protected int y;
 
-    protected WorldEvent onEnterEvent = new WorldEvent();
-    public WorldEvent onMutuallyCollisionEvent = new WorldEvent();
+    protected CollisionSubject onEnterEvent = new CollisionSubject();
+    public CollisionSubject onMutuallyCollisionEvent = new CollisionSubject();
 
 
     public WorldObject(int x, int y) {
@@ -19,8 +19,8 @@ public abstract class WorldObject {
 
     }
 
-    public void addEnterHandler(ObjectEventHandler handler) {
-        this.onEnterEvent.add(handler);
+    public void addEnterHandler(CollisionObserver handler) {
+        this.onEnterEvent.registerObserver(handler);
     }
 
 
@@ -57,7 +57,7 @@ public abstract class WorldObject {
     }
 
     public void onEnter(WorldObject o) {
-        onEnterEvent.emit(o);
+        onEnterEvent.notifyObservers(o);
     }
 
     public void setWorld(World w) {
@@ -103,8 +103,8 @@ public abstract class WorldObject {
         a.onCollision(b);
         b.onCollision(a);
 
-        a.onMutuallyCollisionEvent.emit(b);
-        b.onMutuallyCollisionEvent.emit(a);
+        a.onMutuallyCollisionEvent.notifyObservers(b);
+        b.onMutuallyCollisionEvent.notifyObservers(a);
 
     }
 

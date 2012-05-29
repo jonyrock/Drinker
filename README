@@ -6,6 +6,6 @@
 Дополнительная документация: /docs/
 
 Компилирование:     mvn package
-Запуск:             java -cp target/drinker-1.3.jar drinker.Main 
+Запуск:             java -cp target/drinker-1.4.jar drinker.Main 
 
 Ключ -h для гексорального поля.

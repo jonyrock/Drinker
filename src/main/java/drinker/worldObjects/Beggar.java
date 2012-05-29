@@ -2,7 +2,7 @@ package drinker.worldObjects;
 
 import drinker.Point2D;
 import drinker.WorldObject;
-import drinker.utils.Pair;
+import drinker.World;
 
 import java.util.ArrayList;
 
@@ -33,21 +33,21 @@ public class Beggar extends WorldObject {
         }
 
         if (isWithBottle) {
-            homeCase();
+            stepToHome();
         } else {
             newBottleCase();
         }
 
     }
 
-    void homeCase() {
+    void stepToHome() {
 
-        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, bottleHouse);
+        World.DirectionStep pair = world.findDirectionOnClosestPath(this, bottleHouse);
         if (pair == null) {
             return;
         }
 
-        Point2D direction = pair.first;
+        Point2D direction = pair.direction;
 
         if (direction.isZero()) {
             isWithBottle = false;
@@ -77,16 +77,16 @@ public class Beggar extends WorldObject {
         int minDist = Integer.MAX_VALUE;
 
         for (Bottle bottle : list) {
-            Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, bottle);
+            World.DirectionStep pair = world.findDirectionOnClosestPath(this, bottle);
             if (pair == null) {
                 continue;
             }
-            if (pair.first.isZero()) {
+            if (pair.direction.isZero()) {
                 takeNewBottle(bottle);
                 return;
             }
-            if (pair.second < minDist) {
-                dir = pair.first;
+            if (pair.dist < minDist) {
+                dir = pair.direction;
             }
         }
         if (dir == null) {
@@ -102,7 +102,7 @@ public class Beggar extends WorldObject {
     void takeNewBottle(Bottle bottle) {
         this.bottle = bottle;
         this.isWithBottle = true;
-        homeCase();
+        stepToHome();
     }
 
     @Override

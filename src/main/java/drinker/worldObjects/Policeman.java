@@ -1,9 +1,9 @@
 package drinker.worldObjects;
 
+import drinker.World;
 import drinker.WorldObject;
-import drinker.utils.ObjectEventHandler;
+import drinker.utils.CollisionObserver;
 import drinker.Point2D;
-import drinker.utils.Pair;
 
 import java.util.ArrayDeque;
 import java.util.Collection;
@@ -31,9 +31,9 @@ public class Policeman extends WorldObject {
     }
 
     public void bindToLamp() {
-        ObjectEventHandler ev = new ObjectEventHandler() {
+        CollisionObserver ev = new CollisionObserver() {
 
-            public void onEvent(WorldObject o) {
+            public void notify(WorldObject o) {
                 if (o.isNeedPoliceHelp()) {
                     addTarget(o);
                 }
@@ -65,13 +65,13 @@ public class Policeman extends WorldObject {
 
     private void stepToHome() {
 
-        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, policeStation);
+        World.DirectionStep pair = world.findDirectionOnClosestPath(this, policeStation);
 
         if (pair == null) {
             return;
         }
 
-        Point2D direction = pair.first;
+        Point2D direction = pair.direction;
         
         if (direction.isZero()) {
             busy = false;
@@ -90,13 +90,13 @@ public class Policeman extends WorldObject {
             currentTarget = targets.poll();
         }
 
-        Pair<Point2D, Integer> pair = world.findDirectionOnClosestPath(this, currentTarget);
+        World.DirectionStep pair = world.findDirectionOnClosestPath(this, currentTarget);
 
         if (pair == null) {
             return;
         }
         
-        Point2D direction = pair.first;
+        Point2D direction = pair.direction;
         
         if (direction.isZero()) {
             busy = true;

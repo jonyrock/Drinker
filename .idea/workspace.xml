@@ -6,14 +6,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="Cosmetics">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Tasks4lastFantasy.txt" />
+    <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="Refactoring....">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/drinker/utils/CollisionSubject.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/drinker/utils/WorldEvent.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/DirectionGenerator.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/drinker/utils/ObjectEventHandler.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/utils/CollisionObserver.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drinker.iml" afterPath="$PROJECT_DIR$/Drinker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/Point2D.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/Point2D.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README" afterPath="$PROJECT_DIR$/README" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Tasks4lastFantasy.txt" afterPath="$PROJECT_DIR$/docs/Tasks4lastFantasy.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/World.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/WorldObject.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/WorldObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/drinker/Tests.java" afterPath="$PROJECT_DIR$/src/test/java/drinker/Tests.java" />
     </list>
     <ignored path="Drinker.iws" />
@@ -72,20 +77,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Tasks4lastFantasy.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Tasks4lastFantasy.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/docs/Tasks4lastFantasy.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+            <state line="5" column="34" selection-start="136" selection-end="136" vertical-scroll-proportion="0.15858209">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Pair.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java">
+      <file leaf-file-name="CollisionObserver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/CollisionObserver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.3877193">
+            <state line="6" column="31" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CollisionSubject.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/CollisionSubject.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="24" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="docComment;class#CollisionSubject#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bottle.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Bottle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="13" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Beggar.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="14" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#Beggar#0;class#Beggar#0" expanded="false" />
+                <element signature="method#draw#0;class#Beggar#0" expanded="false" />
+                <element signature="method#onTick#0;class#Beggar#0" expanded="false" />
+                <element signature="method#stepToHome#0;class#Beggar#0" expanded="false" />
+                <element signature="method#newBottleCase#0;class#Beggar#0" expanded="false" />
+                <element signature="method#takeNewBottle#0;class#Beggar#0" expanded="false" />
+                <element signature="method#isMovable#0;class#Beggar#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -99,28 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ground.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Ground.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="14" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Tests.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/drinker/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="9" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
+            <state line="58" column="27" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
                 <element signature="docComment;method#test_16_0_Position#0;class#Tests#0" expanded="false" />
@@ -128,7 +152,6 @@
                 <element signature="docComment;method#test_0_7_Position#0;class#Tests#0" expanded="false" />
                 <element signature="method#test_0_7_Position#0;class#Tests#0" expanded="false" />
                 <element signature="docComment;method#testTopersMeeting#0;class#Tests#0" expanded="false" />
-                <element signature="method#testTopersMeeting#0;class#Tests#0" expanded="false" />
                 <element signature="docComment;method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
                 <element signature="method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
                 <element signature="docComment;method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
@@ -141,17 +164,33 @@
       <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/drinker/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="375" column="7" selection-start="9565" selection-end="9623" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="263" column="25" selection-start="6346" selection-end="6346" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#665#697#0" expanded="true" />
+                <element signature="method#findDirectionOnClosestPath#0;class#World#0" expanded="false" />
+                <element signature="e#6593#6602#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lamp.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java">
+      <file leaf-file-name="Policeman.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="85" column="0" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#Policeman#0;class#Policeman#0" expanded="false" />
+                <element signature="method#bindToLamp#0;class#Policeman#0" expanded="false" />
+                <element signature="class#782:973" expanded="false" />
+                <element signature="method#notify#0;class#782:973" expanded="false" />
+                <element signature="method#onTick#0;class#Policeman#0" expanded="false" />
+                <element signature="method#stepToHome#0;class#Policeman#0" expanded="false" />
+                <element signature="method#stepToHelp#0;class#Policeman#0" expanded="false" />
+                <element signature="method#draw#0;class#Policeman#0" expanded="false" />
+                <element signature="method#isSuspendAble#0;class#Policeman#0" expanded="false" />
+                <element signature="method#isMovable#0;class#Policeman#0" expanded="false" />
+                <element signature="method#addTarget#0;class#Policeman#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,21 +210,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/PoliceStation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Tavern.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Bottle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/utils/ObjectEventHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/utils/WorldEvent.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/BottleHouse.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/FieldBorder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/drinker/Tests.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/Point2D.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/World.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/WorldObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/World.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/utils/WorldEvent.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/utils/CollisionSubject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/utils/ObjectEventHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/utils/CollisionObserver.java" />
+        <option value="$PROJECT_DIR$/README" />
+        <option value="$PROJECT_DIR$/src/test/java/drinker/Tests.java" />
         <option value="$PROJECT_DIR$/docs/Tasks4lastFantasy.txt" />
       </list>
     </option>
@@ -452,36 +491,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -543,7 +552,7 @@
       <recent name="drinker" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.Tests">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="drinker.Main" />
       <option name="VM_PARAMETERS" value="" />
@@ -810,7 +819,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cosmetics" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactoring...." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -839,6 +848,7 @@
     <MESSAGE value="Positions translates&#10;" />
     <MESSAGE value="Maven add" />
     <MESSAGE value="Cosmetics" />
+    <MESSAGE value="Refactoring...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -848,27 +858,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/Point2D.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.5883424">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Tasks1basics.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="0" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.6812386">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/Tasks2utests.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="483" selection-end="483" vertical-scroll-proportion="0.3406193">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///usr/lib/jvm/java-1.6.0-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="157" column="0" selection-start="6015" selection-end="6015" vertical-scroll-proportion="0.3955224">
@@ -883,30 +872,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/DirectionGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.18579236">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Ground.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="14" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="375" column="7" selection-start="9565" selection-end="9623" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="324" selection-end="324" vertical-scroll-proportion="0.3096539">
           <folding />
         </state>
       </provider>
@@ -945,21 +913,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/drinker/Tests.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="9" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
+        <state line="37" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="263" column="25" selection-start="6346" selection-end="6346" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
-            <element signature="docComment;method#test_16_0_Position#0;class#Tests#0" expanded="false" />
-            <element signature="method#test_16_0_Position#0;class#Tests#0" expanded="false" />
-            <element signature="docComment;method#test_0_7_Position#0;class#Tests#0" expanded="false" />
-            <element signature="method#test_0_7_Position#0;class#Tests#0" expanded="false" />
-            <element signature="docComment;method#testTopersMeeting#0;class#Tests#0" expanded="false" />
-            <element signature="method#testTopersMeeting#0;class#Tests#0" expanded="false" />
-            <element signature="docComment;method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
-            <element signature="method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
-            <element signature="docComment;method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
-            <element signature="method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
+            <element signature="e#665#697#0" expanded="true" />
+            <element signature="method#findDirectionOnClosestPath#0;class#World#0" expanded="false" />
+            <element signature="e#6593#6602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Bottle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="13" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="14" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#Beggar#0;class#Beggar#0" expanded="false" />
+            <element signature="method#draw#0;class#Beggar#0" expanded="false" />
+            <element signature="method#onTick#0;class#Beggar#0" expanded="false" />
+            <element signature="method#stepToHome#0;class#Beggar#0" expanded="false" />
+            <element signature="method#newBottleCase#0;class#Beggar#0" expanded="false" />
+            <element signature="method#takeNewBottle#0;class#Beggar#0" expanded="false" />
+            <element signature="method#isMovable#0;class#Beggar#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="0" selection-start="1786" selection-end="1786" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#Policeman#0;class#Policeman#0" expanded="false" />
+            <element signature="method#bindToLamp#0;class#Policeman#0" expanded="false" />
+            <element signature="class#782:973" expanded="false" />
+            <element signature="method#notify#0;class#782:973" expanded="false" />
+            <element signature="method#onTick#0;class#Policeman#0" expanded="false" />
+            <element signature="method#stepToHome#0;class#Policeman#0" expanded="false" />
+            <element signature="method#stepToHelp#0;class#Policeman#0" expanded="false" />
+            <element signature="method#draw#0;class#Policeman#0" expanded="false" />
+            <element signature="method#isSuspendAble#0;class#Policeman#0" expanded="false" />
+            <element signature="method#isMovable#0;class#Policeman#0" expanded="false" />
+            <element signature="method#addTarget#0;class#Policeman#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -971,23 +979,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/CollisionObserver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+        <state line="6" column="31" selection-start="122" selection-end="122" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/CollisionSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="24" selection-start="388" selection-end="388" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="docComment;class#CollisionSubject#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="47" selection-start="281" selection-end="281" vertical-scroll-proportion="0.24772313">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/drinker/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="27" selection-start="1407" selection-end="1407" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#test_16_0_Position#0;class#Tests#0" expanded="false" />
+            <element signature="method#test_16_0_Position#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#test_0_7_Position#0;class#Tests#0" expanded="false" />
+            <element signature="method#test_0_7_Position#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testTopersMeeting#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
+            <element signature="method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
+            <element signature="method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/Tasks4lastFantasy.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.3877193">
+        <state line="5" column="34" selection-start="136" selection-end="136" vertical-scroll-proportion="0.15858209">
           <folding />
         </state>
       </provider>

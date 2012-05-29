@@ -1,13 +1,6 @@
 *** BUGS ***
 
-6. drinker.utils.Pair - есть логичные объяснения, почему в Java нет стандартного класса Pair:
-http://stackoverflow.com/questions/156275/what-is-the-equivalent-of-the-c-pairl-r-in-java
-
-7. Имена методов drinker.worldObjects.Policeman#stepToHome и drinker.worldObjects.Policeman#stepToHelp говорят намного о большем, чем drinker.worldObjects.Beggar#homeCase, drinker.worldObjects.Beggar#homeCase
-8. Класс drinker.utils.WorldEvent по своей семантике является Subject'ом из паттерна Listener (EventSource, Emitter). Event'ом он точно не является.
-
-9. drinker.Tests#testTopersMeeting - было бы здорово проверить, что оба остались на своих местах 
-
+10.
 Сильно не хватает тестов на основных персонажей:
  - столкновения пьяницы с бутылкой
  - столкновения пьяницы со столбом
@@ -27,6 +20,23 @@ drinker.World#addAddObjectHandler
 drinker.World#addPreTickEvent
 drinker.World#addPostTickEvent
 drinker.worldObjects.DirectionGenerator
+
+6. drinker.utils.Pair - есть логичные объяснения, почему в Java нет стандартного класса Pair:
+http://stackoverflow.com/questions/156275/what-is-the-equivalent-of-the-c-pairl-r-in-java
+Да, в этом есть смысл. См. World.DirectionStep
+
+7. Имена методов drinker.worldObjects.Policeman#stepToHome и drinker.worldObjects.Policeman#stepToHelp 
+говорят намного о большем, чем drinker.worldObjects.Beggar#homeCase, drinker.worldObjects.Beggar#homeCase
+
+8. Класс drinker.utils.WorldEvent по своей семантике является Subject'ом из паттерна Listener (EventSource, Emitter). 
+Event'ом он точно не является.
+
+Имена переписаны в соответствии с http://en.wikipedia.org/wiki/Observer_pattern 
+Вообще я писал без специального знакомства с паттерном Observer.
+Я опирался на опыт полученный из .Net. http://msdn.microsoft.com/en-us/library/aa645739(v=vs.71).aspx
+Можно видеть, что event - это контейнер делегатов. В нашем случае это список реализаций CollisionObserver
+
+9. drinker.Tests#testTopersMeeting - было бы здорово проверить, что оба остались на своих местах
 
 *** IGNORED ***
 1. drinker.Tests#testNormalFieldBeggarPathToBottle1 - не здорово, что метод приходится вызывать 40 раз
@@ -52,3 +62,6 @@ for (int i = 1; i <= 41; i++) {
 В этих тестах проверяется метод world.isPossibleForStep а не fromYXtoWorldFieldCoordinates, так как последний
 нужен для транслирования координат в которых формулируется задание в координаты в моем приложении. Поэтому этот
 метод и используется только в тестах: в самом приложении изначально все происходит в других координатах.
+
+
+

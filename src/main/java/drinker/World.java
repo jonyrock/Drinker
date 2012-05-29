@@ -1,8 +1,5 @@
 package drinker;
 
-import drinker.utils.ObjectEventHandler;
-import drinker.utils.Pair;
-import drinker.utils.WorldEvent;
 import drinker.worldObjects.*;
 
 import java.io.PrintStream;
@@ -257,11 +254,18 @@ public class World {
 
     }
 
-    public Pair<Point2D, Integer> findDirectionOnClosestPath(
+    /**
+     * Search shortest path by Dijkstra algorithm
+     *
+     * @param start  from object
+     * @param finish to object
+     * @return direction for step and distance
+     */
+    public DirectionStep findDirectionOnClosestPath(
             WorldObject start, WorldObject finish) {
 
         if (start.isSameLocation(finish))
-            return new Pair<Point2D, Integer>(new Point2D(0, 0), 0);
+            return new DirectionStep(new Point2D(0, 0), 0);
 
 
         Queue<Point2D> queue = new
@@ -312,10 +316,23 @@ public class World {
 
         }
 
-        return new Pair<Point2D, Integer>(new Point2D(prevPoint.x - start.getX(),
+        return new DirectionStep(new Point2D(prevPoint.x - start.getX(),
                 prevPoint.y - start.getY()), dist);
 
 
+    }
+
+
+    /**
+     * findDirectionOnClosestPath result structure
+     */
+    public class DirectionStep {
+        public final Point2D direction;
+        public final int dist;
+        public DirectionStep(Point2D p, int d){
+            this.direction = p;
+            this.dist = d;
+        }
     }
 
     /**

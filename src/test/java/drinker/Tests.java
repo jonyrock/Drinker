@@ -1,6 +1,6 @@
 package drinker;
 
-import drinker.utils.WorldEvent;
+import drinker.utils.CollisionSubject;
 import drinker.worldObjects.Beggar;
 import drinker.worldObjects.Bottle;
 import drinker.worldObjects.BottleHouse;
@@ -52,11 +52,20 @@ public class Tests {
     public void testTopersMeeting() {
 
         Toper t1 = new Toper(world, 5, 5);
+        int x1 = t1.getX();
+        int y1 = t1.getY();
         Toper t2 = new Toper(world, 6, 5);
+        int x2 = t2.getX();
+        int y2 = t2.getY();
+        
         WorldObject.mutuallyCollision(t1, t2);
 
         Assert.assertTrue(t1.isMovable());
         Assert.assertTrue(t2.isMovable());
+        
+        
+        Assert.assertTrue(t1.getX() == x1 && t1.getY() == y1);
+        Assert.assertTrue(t2.getX() == x2 && t2.getY() == y2);
 
     }
 
@@ -69,8 +78,8 @@ public class Tests {
 
         Toper t1 = mock(Toper.class);
         Toper t2 = mock(Toper.class);
-        t1.onMutuallyCollisionEvent = new WorldEvent();
-        t2.onMutuallyCollisionEvent = new WorldEvent();
+        t1.onMutuallyCollisionEvent = new CollisionSubject();
+        t2.onMutuallyCollisionEvent = new CollisionSubject();
 
         WorldObject.mutuallyCollision(t1, t2);
 
