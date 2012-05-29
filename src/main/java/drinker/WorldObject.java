@@ -1,7 +1,7 @@
 package drinker;
 
-import drinker.utils.CollisionSubject;
 import drinker.utils.CollisionObserver;
+import drinker.utils.CollisionSubject;
 
 public abstract class WorldObject {
 
@@ -28,15 +28,19 @@ public abstract class WorldObject {
         return x;
     }
 
-    public void setX(int x){
+    public void setX(int x) {
         this.x = x;
     }
-    
+
     public int getY() {
         return y;
     }
 
-    public void setY(int y){
+    public Point2D getPosition() {
+        return new Point2D(this.x, this.y);
+    }
+
+    public void setY(int y) {
         this.y = y;
     }
 

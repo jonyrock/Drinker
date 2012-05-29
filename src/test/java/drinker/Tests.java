@@ -9,15 +9,14 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-
 import java.io.PrintStream;
 import java.util.ArrayList;
 
 import static org.mockito.Mockito.*;
 
 public class Tests {
-        
-    
+
+
     private World world;
 
     @Before
@@ -52,21 +51,55 @@ public class Tests {
     public void testTopersMeeting() {
 
         Toper t1 = new Toper(world, 5, 5);
-        int x1 = t1.getX();
-        int y1 = t1.getY();
+        Point2D p1 = t1.getPosition();
         Toper t2 = new Toper(world, 6, 5);
-        int x2 = t2.getX();
-        int y2 = t2.getY();
-        
+        Point2D p2 = t2.getPosition();
+
         WorldObject.mutuallyCollision(t1, t2);
 
         Assert.assertTrue(t1.isMovable());
         Assert.assertTrue(t2.isMovable());
-        
-        
-        Assert.assertTrue(t1.getX() == x1 && t1.getY() == y1);
-        Assert.assertTrue(t2.getX() == x2 && t2.getY() == y2);
 
+        Assert.assertTrue(t1.getPosition().equals(p1));
+        Assert.assertTrue(t2.getPosition().equals(p2));
+
+    }
+
+    @Test
+    public void testToperBottleMeeting() {
+        Toper t1 = new Toper(world, 5, 5);
+        Point2D p1 = t1.getPosition();
+        Bottle t2 = new Bottle(5, 6);
+        Point2D p2 = t2.getPosition();
+        WorldObject.mutuallyCollision(t1, t2);
+        t1.onTick();
+        Assert.assertFalse(t1.getPosition().equals(p1));
+        Assert.assertTrue(t2.getPosition().equals(p2));
+    }
+
+    @Test
+    public void testToperPoleMeeting() {
+        Toper t1 = new Toper(world, 5, 5);
+        Point2D p1 = t1.getPosition();
+        WorldObject.mutuallyCollision(t1, world.pole);
+        t1.onTick();
+        Assert.assertTrue(t1.getPosition().equals(p1));
+        Assert.assertFalse(t1.isMovable());
+    }
+
+    /**
+     * toper meets toper who had met pole before
+     */
+    @Test
+    public void testToperToperPoleMeeting() {
+        Toper t1 = new Toper(world, 5, 5);
+        Toper t2 = new Toper(world, 5, 5);
+        Point2D p1 = t1.getPosition();
+        WorldObject.mutuallyCollision(t1, world.pole);
+        t1.onTick();
+        WorldObject.mutuallyCollision(t1, t2);
+        Assert.assertTrue(t2.getPosition().equals(p1));
+        Assert.assertFalse(t2.isMovable());
     }
 
     /**
@@ -97,32 +130,32 @@ public class Tests {
 
         // beggar with unreachable BottleHouse. Tests only path to bottle 
         Beggar beggar = new Beggar(new BottleHouse(20, 20), 10, 12);
-        
+
         // create example world  
         World w = mock(World.class);
         ArrayList<Bottle> bottles = new ArrayList<Bottle>();
         bottles.add(new Bottle(10, 13));
         stub(w.getBottles()).toReturn(bottles);
-        
+
         // and bind to real world the method. 
         stub(w.findDirectionOnClosestPath(beggar, bottles.get(0)))
                 .toReturn(world.findDirectionOnClosestPath(beggar, bottles.get(0)));
 
         // is needed by contract
         beggar.setWorld(w);
-        
+
         // 40 times wait and only move
         for (int i = 1; i <= 41; i++) {
             beggar.onTick();
         }
-        
+
         // check that beggar tried find way 
         verify(w).getBottles();
         verify(w).findDirectionOnClosestPath(beggar, bottles.get(0));
-        
-        
+
+
         Assert.assertTrue(beggar.isSameLocation(bottles.get(0)));
-        
+
 
     }
 

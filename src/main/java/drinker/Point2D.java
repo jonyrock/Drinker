@@ -18,5 +18,8 @@ public class Point2D {
         return this.x == 0 && this.y == 0;
     }
 
+    public boolean equals(Point2D b) {
+        return this.x == b.x && this.y == b.y;
+    }
 
 }
