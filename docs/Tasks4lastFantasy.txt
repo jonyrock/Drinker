@@ -31,9 +31,9 @@ http://stackoverflow.com/questions/156275/what-is-the-equivalent-of-the-c-pairl-
 Event'ом он точно не является.
 
 Имена переписаны в соответствии с http://en.wikipedia.org/wiki/Observer_pattern 
-Вообще я писал без специального знакомства с паттерном Observer.
+Вообще я писал без подробного знакомства с паттерном Observer.
 Я опирался на опыт полученный из .Net. http://msdn.microsoft.com/en-us/library/aa645739(v=vs.71).aspx
-Можно видеть, что event - это контейнер делегатов. В нашем случае это список реализаций CollisionObserver
+Можно видеть, что event - это контейнер делегатов. В нашем случае это список реализаций CollisionObserver.
 
 9. drinker.Tests#testTopersMeeting - было бы здорово проверить, что оба остались на своих местах
 

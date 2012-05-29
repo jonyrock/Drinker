@@ -1,10 +1,7 @@
 package drinker;
 
 import drinker.utils.CollisionSubject;
-import drinker.worldObjects.Beggar;
-import drinker.worldObjects.Bottle;
-import drinker.worldObjects.BottleHouse;
-import drinker.worldObjects.Toper;
+import drinker.worldObjects.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -121,6 +118,35 @@ public class Tests {
 
     }
 
+    /**
+     * Test that policeman surrounded by topers can't move.
+     * After that one toper disappears and policeman has to move
+     */
+    @Test
+    public void testPolicemanToTopper() {
+
+        Toper exitToper = new Toper(world, 5, 5);
+        world.addObject(new Toper(world, 7, 5));
+        world.addObject(new Toper(world, 6, 4));
+        world.addObject(new Toper(world, 6, 6));
+        Toper targetToper = new Toper(world, 12, 13);
+        world.addObject(targetToper);
+        world.addObject(exitToper);
+
+        Policeman policeman = new Policeman(world.lamp, world.policeStation, 5, 6);
+        policeman.setWorld(world);
+        policeman.addTarget(targetToper);
+        policeman.onTick();
+        
+        Point2D p1 = policeman.getPosition();
+        
+        Assert.assertTrue(policeman.getPosition().equals(p1));
+
+        world.removeObject(exitToper);
+        policeman.onTick();
+        Assert.assertFalse(policeman.getPosition().equals(p1));
+
+    }
 
     /**
      * Tests that beggar finds right direction

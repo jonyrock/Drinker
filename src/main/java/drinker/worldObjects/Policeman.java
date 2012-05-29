@@ -3,7 +3,6 @@ package drinker.worldObjects;
 import drinker.World;
 import drinker.WorldObject;
 import drinker.utils.CollisionObserver;
-import drinker.Point2D;
 
 import java.util.ArrayDeque;
 import java.util.Collection;
@@ -50,7 +49,7 @@ public class Policeman extends WorldObject {
     @Override
     public void onTick() {
 
-        if (!busy && targets.isEmpty()) {
+        if (!busy && targets.isEmpty() && currentTarget == null) {
             return;
         }
 
@@ -71,16 +70,14 @@ public class Policeman extends WorldObject {
             return;
         }
 
-        Point2D direction = pair.direction;
-        
-        if (direction.isZero()) {
+        if (pair.dist == 0) {
             busy = false;
             currentTarget = null;
             return;
         }
 
-        super.x += direction.x;
-        super.y += direction.y;
+        super.x += pair.direction.x;
+        super.y += pair.direction.y;
 
     }
 
@@ -96,16 +93,14 @@ public class Policeman extends WorldObject {
             return;
         }
         
-        Point2D direction = pair.direction;
-        
-        if (direction.isZero()) {
+        if (pair.dist == 0) {
             busy = true;
             world.removeObject(currentTarget);
             return;
         }
-
-        super.x += direction.x;
-        super.y += direction.y;
+        
+        super.x += pair.direction.x;
+        super.y += pair.direction.y;
 
     }
 
