@@ -1,0 +1,54 @@
+*** BUGS ***
+
+6. drinker.utils.Pair - есть логичные объяснения, почему в Java нет стандартного класса Pair:
+http://stackoverflow.com/questions/156275/what-is-the-equivalent-of-the-c-pairl-r-in-java
+
+7. Имена методов drinker.worldObjects.Policeman#stepToHome и drinker.worldObjects.Policeman#stepToHelp говорят намного о большем, чем drinker.worldObjects.Beggar#homeCase, drinker.worldObjects.Beggar#homeCase
+8. Класс drinker.utils.WorldEvent по своей семантике является Subject'ом из паттерна Listener (EventSource, Emitter). Event'ом он точно не является.
+
+9. drinker.Tests#testTopersMeeting - было бы здорово проверить, что оба остались на своих местах 
+
+Сильно не хватает тестов на основных персонажей:
+ - столкновения пьяницы с бутылкой
+ - столкновения пьяницы со столбом
+ - столкновения пьяницы с уснувшим стоя пьяницей
+...и так для остальных персонажей  
+
+*** DONE ***
+2. drinker.Point2D - класс с типичной семантикой immutable объекта. Метод copy() здесь кажется странно. 
+Поля просятся в private, +public селекторы, equals(). С классом будет гораздо проще работать.
+Поля больше просились в final чем в private. В equals() нет необходимости.
+
+5. Много не используемого кода:
+drinker.WorldObject#addPreTickEvent
+drinker.WorldObject#addPostTickEvent
+drinker.WorldObject#addMutuallyCollisionHandler
+drinker.World#addAddObjectHandler
+drinker.World#addPreTickEvent
+drinker.World#addPostTickEvent
+drinker.worldObjects.DirectionGenerator
+
+*** IGNORED ***
+1. drinker.Tests#testNormalFieldBeggarPathToBottle1 - не здорово, что метод приходится вызывать 40 раз
+
+Если речь идет о куске кода  
+// 40 times wait and only move
+for (int i = 1; i <= 41; i++) {
+    beggar.onTick();
+}
+То почему нездорово? У нас есть правила игры по которым нищий должен быть 40 раз оповещен о его ходе. Все
+40 раз он должен ничего не делать, 1 раз он должен сделать шаг. Т.е. получается нездорово что я буквально
+проверяю правила игры.  
+
+3. drinker.worldObjects.Ground: сейчас в программе порождается порядка 200 обсолютно одинаковых объектов. 
+У этого решения есть хорошие стороны: после добавления 200 абсолютно одинаковых объектов
+в процессе игры некоторые из них могут приобретать уникальные свойства. Например, некоторые из них становяться 
+подсвеченными лампой. А уже после того как они "засветились", они учавствуют в логике игры - на эти объяекты 
+наступают персонажи. Я согласен что лучше было сделать один объект ground, который уже не хранил бы 200 копий, 
+выполнял бы теже фунции, но был бы куда более сложно устроен.
+
+4. drinker.Tests#test_16_0_Position, drinker.Tests#test_0_7_Position:
+   сомнительно тестировать нигде не используемый метод drinker.World#fromYXtoWorldFieldCoordinates.
+В этих тестах проверяется метод world.isPossibleForStep а не fromYXtoWorldFieldCoordinates, так как последний
+нужен для транслирования координат в которых формулируется задание в координаты в моем приложении. Поэтому этот
+метод и используется только в тестах: в самом приложении изначально все происходит в других координатах.

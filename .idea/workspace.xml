@@ -6,33 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/junit-4.10.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/libs/mockito-all-1.9.0.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="b4a90b3b-3937-4193-8a43-958af1d6a14c" name="Default" comment="Cosmetics">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Tasks4lastFantasy.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Drinker.iml" afterPath="$PROJECT_DIR$/Drinker.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/Game.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/Main.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/Point2D.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/Point2D.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/World.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/WorldObject.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/WorldObject.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/utils/ObjectEventHandler.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/utils/ObjectEventHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/utils/WorldEvent.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/utils/WorldEvent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Bottle.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Bottle.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/BottleHouse.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/BottleHouse.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/DirectionGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/DirectionGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/FieldBorder.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/FieldBorder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Ground.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Ground.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Pole.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Pole.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/PoliceStation.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/PoliceStation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Tavern.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Tavern.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java" afterPath="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/drinker/Tests.java" afterPath="$PROJECT_DIR$/src/test/java/drinker/Tests.java" />
     </list>
     <ignored path="Drinker.iws" />
@@ -90,7 +71,92 @@
     <favorites_list name="Drinker" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="Tasks4lastFantasy.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/Tasks4lastFantasy.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Pair.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.3877193">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Toper.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="4" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Ground.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Ground.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="14" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tests.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/drinker/Tests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="32" column="9" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
+                <element signature="docComment;method#test_16_0_Position#0;class#Tests#0" expanded="false" />
+                <element signature="method#test_16_0_Position#0;class#Tests#0" expanded="false" />
+                <element signature="docComment;method#test_0_7_Position#0;class#Tests#0" expanded="false" />
+                <element signature="method#test_0_7_Position#0;class#Tests#0" expanded="false" />
+                <element signature="docComment;method#testTopersMeeting#0;class#Tests#0" expanded="false" />
+                <element signature="method#testTopersMeeting#0;class#Tests#0" expanded="false" />
+                <element signature="docComment;method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
+                <element signature="method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
+                <element signature="docComment;method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
+                <element signature="method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/World.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="375" column="7" selection-start="9565" selection-end="9623" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lamp.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -105,9 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Pole.java" />
-        <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/PoliceStation.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Tavern.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java" />
@@ -118,9 +181,12 @@
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/BottleHouse.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/worldObjects/FieldBorder.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/drinker/Tests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/drinker/Point2D.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/World.java" />
         <option value="$PROJECT_DIR$/src/main/java/drinker/WorldObject.java" />
-        <option value="$PROJECT_DIR$/src/test/java/drinker/Tests.java" />
+        <option value="$PROJECT_DIR$/docs/Tasks4lastFantasy.txt" />
       </list>
     </option>
   </component>
@@ -179,18 +245,14 @@
           <option name="myItemId" value="drinker" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Lifecycle" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
-        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="-5" />
-    <option name="width" value="1922" />
-    <option name="height" value="1086" />
+    <option name="y" value="24" />
+    <option name="width" value="1368" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -270,7 +332,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="PackagesPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -292,38 +354,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="Drinker" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="drinker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -422,6 +452,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Drinker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="docs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -431,22 +491,27 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.generateIdeaHomeProperty" value="false" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="72" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="94" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="GenerateAntBuildDialog.generateSingleFile" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="81" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="GenerateAntBuildDialog.inclineRuntiemClasspath" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="100" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1006" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1009" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="97" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="drinker" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="91" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
@@ -459,10 +524,12 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
     <property name="options.lastSelected" value="MavenSettings" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="dynamic.classpath" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -489,7 +556,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Drinker" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -679,26 +752,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-5" width="1922" height="1086" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="24" width="1368" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44295302" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45948827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45805368" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32942432" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290735" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34081197" sideWeight="0.67164177" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21699545" sideWeight="0.67164177" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19871795" sideWeight="0.67164177" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19802731" sideWeight="0.5419463" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32718122" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283582" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -775,93 +848,147 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Tavern.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/Point2D.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0" />
+        <state line="19" column="0" selection-start="302" selection-end="302" vertical-scroll-proportion="0.5883424">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java">
+    <entry file="file://$PROJECT_DIR$/docs/Tasks1basics.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0" />
+        <state line="25" column="0" selection-start="1520" selection-end="1520" vertical-scroll-proportion="0.6812386">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Bottle.java">
+    <entry file="file://$PROJECT_DIR$/docs/Tasks2utests.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="24" selection-start="203" selection-end="203" vertical-scroll-proportion="0.0" />
+        <state line="11" column="28" selection-start="483" selection-end="483" vertical-scroll-proportion="0.3406193">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/ObjectEventHandler.java">
+    <entry file="jar:///usr/lib/jvm/java-1.6.0-openjdk/jre/lib/rt.jar!/java/util/ArrayList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="31" selection-end="31" vertical-scroll-proportion="0.03815937" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="8" selection-start="8" selection-end="8" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/WorldEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="119" selection-end="119" vertical-scroll-proportion="0.13048245" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Beggar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0372807" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/BottleHouse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0372807" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/FieldBorder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="7" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0372807" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Policeman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="20" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/WorldObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="50" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.8.1/junit-4.8.1-sources.jar!/org/junit/Before.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="25" selection-start="668" selection-end="668" vertical-scroll-proportion="0.2647386" />
+        <state line="157" column="0" selection-start="6015" selection-end="6015" vertical-scroll-proportion="0.3955224">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/drinker/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="30" selection-start="273" selection-end="273" vertical-scroll-proportion="0.31688598">
+        <state line="26" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/DirectionGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="73" selection-end="73" vertical-scroll-proportion="0.18579236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Ground.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="74" selection-end="74" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/drinker/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="157" column="5" selection-start="4118" selection-end="4118" vertical-scroll-proportion="0.0189099">
+        <state line="375" column="7" selection-start="9565" selection-end="9623" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/README">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="36" selection-start="596" selection-end="596" vertical-scroll-proportion="0.0189099">
+        <state line="10" column="23" selection-start="324" selection-end="324" vertical-scroll-proportion="0.3096539">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Tasks3hex.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="51" selection-start="2170" selection-end="2170" vertical-scroll-proportion="0.18579236">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/WorldObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="34" selection-start="1184" selection-end="1184" vertical-scroll-proportion="0.47719297">
+          <folding>
+            <element signature="method#WorldObject#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#addEnterHandler#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#getX#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setX#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#getY#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setY#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#onWorldTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onTick#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onCollision#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#onEnter#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#setWorld#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isMovable#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isReasonToStopToper#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="docComment;method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isLatencySuspendAble#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isNeedPoliceHelp#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#isSameLocation#0;class#WorldObject#0" expanded="false" />
+            <element signature="method#mutuallyCollision#0;class#WorldObject#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/drinker/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="45" selection-start="930" selection-end="930" vertical-scroll-proportion="0.1701891">
+        <state line="32" column="9" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="method#initWorld#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#test_16_0_Position#0;class#Tests#0" expanded="false" />
+            <element signature="method#test_16_0_Position#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#test_0_7_Position#0;class#Tests#0" expanded="false" />
+            <element signature="method#test_0_7_Position#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testTopersMeeting#0;class#Tests#0" expanded="false" />
+            <element signature="method#testTopersMeeting#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
+            <element signature="method#testMutualCollisionMethod#0;class#Tests#0" expanded="false" />
+            <element signature="docComment;method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
+            <element signature="method#testNormalFieldBeggarPathToBottle1#0;class#Tests#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Toper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="4" selection-start="1605" selection-end="1605" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/worldObjects/Lamp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="795" selection-end="795" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/Tasks4lastFantasy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/drinker/utils/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="197" selection-end="197" vertical-scroll-proportion="0.3877193">
+          <folding />
         </state>
       </provider>
     </entry>

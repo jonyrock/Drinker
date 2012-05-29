@@ -1,8 +1,5 @@
 package drinker;
 
-
-import drinker.World;
-import drinker.WorldObject;
 import drinker.utils.WorldEvent;
 import drinker.worldObjects.Beggar;
 import drinker.worldObjects.Bottle;

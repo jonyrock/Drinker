@@ -4,7 +4,7 @@
     <groupId>drinker</groupId>
     <artifactId>drinker</artifactId>
     <packaging>jar</packaging>
-    <version>1.3</version>
+    <version>1.4</version>
     <name>drinker</name>
     <url>http://maven.apache.org</url>
     <dependencies>

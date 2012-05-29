@@ -11,8 +11,6 @@ public abstract class WorldObject {
 
     protected WorldEvent onEnterEvent = new WorldEvent();
     public WorldEvent onMutuallyCollisionEvent = new WorldEvent();
-    protected WorldEvent onPreTickEvent = new WorldEvent();
-    protected WorldEvent onPostTickEvent = new WorldEvent();
 
 
     public WorldObject(int x, int y) {
@@ -25,29 +23,6 @@ public abstract class WorldObject {
         this.onEnterEvent.add(handler);
     }
 
-
-    /**
-     * Event triggering after collision processing
-     *
-     * @param handler ...
-     */
-    public void addMutuallyCollisionHandler(ObjectEventHandler handler) {
-        this.onMutuallyCollisionEvent.add(handler);
-    }
-
-
-    /**
-     * object will be null
-     *
-     * @param e will
-     */
-    public void addPreTickEvent(ObjectEventHandler e) {
-        onPreTickEvent.add(e);
-    }
-
-    public void addPostTickEvent(ObjectEventHandler e) {
-        onPostTickEvent.add(e);
-    }
 
     public int getX() {
         return x;
@@ -72,9 +47,7 @@ public abstract class WorldObject {
      * need for trigger event
      */
     public final void onWorldTick() {
-        onPreTickEvent.emit(this);
         onTick();
-        onPostTickEvent.emit(this);
     }
 
     public void onTick() {

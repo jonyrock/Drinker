@@ -2,13 +2,12 @@ package drinker;
 
 public class Point2D {
 
-    public int x;
-    public int y;
+    public final int x;
+    public final int y;
 
     public Point2D() {
         this(0, 0);
     }
-
 
     public Point2D(int x, int y) {
         this.x = x;
@@ -19,8 +18,5 @@ public class Point2D {
         return this.x == 0 && this.y == 0;
     }
 
-    public Point2D copy() {
-        return new Point2D(this.x, this.y);
-    }
 
 }

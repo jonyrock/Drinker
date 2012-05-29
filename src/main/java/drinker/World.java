@@ -29,9 +29,6 @@ public class World {
     private ArrayList<Bottle> bottles;
     private ArrayList<WorldObject> worldObjects[][];
 
-    protected WorldEvent onAddObjectEvent = new WorldEvent();
-    protected WorldEvent onPreTickEvent = new WorldEvent();
-    protected WorldEvent onPostTickEvent = new WorldEvent();
 
     @SuppressWarnings({"unchecked"})
     public World(boolean isHex, PrintStream stream) {
@@ -122,8 +119,6 @@ public class World {
         tickCount++;
         tickCursor--;
 
-        onPreTickEvent.emit(null);
-
         if (tickCount % 20 == 0) {
             addToper();
             return;
@@ -138,8 +133,6 @@ public class World {
         }
 
         tickObject(movableObjects.get(tickCursor));
-
-        onPostTickEvent.emit(null);
 
     }
 
@@ -181,20 +174,6 @@ public class World {
 
         worldObjects[o.getX()][o.getY()].add(o);
 
-        onAddObjectEvent.emit(o);
-
-    }
-
-    public void addAddObjectHandler(ObjectEventHandler handler) {
-        this.onAddObjectEvent.add(handler);
-    }
-
-    public void addPreTickEvent(ObjectEventHandler handler) {
-        onPreTickEvent.add(handler);
-    }
-
-    public void addPostTickEvent(ObjectEventHandler handler) {
-        onPostTickEvent.add(handler);
     }
 
     public void removeObject(WorldObject o) {
@@ -324,8 +303,7 @@ public class World {
 
         while (!(nextPrevX == start.getX() && nextPrevY == start.getY())) {
 
-            prevPoint.x = nextPrevX;
-            prevPoint.y = nextPrevY;
+            prevPoint = new Point2D(nextPrevX, nextPrevY);
 
             nextPrevX = prevMatrix[prevPoint.x][prevPoint.y].x;
             nextPrevY = prevMatrix[prevPoint.x][prevPoint.y].y;
@@ -360,15 +338,15 @@ public class World {
         int newY = current.y + step.y;
 
         if (newX == finish.getX() && newY == finish.getY()) {
-            prevMatrix[newX][newY] = current.copy();
+            prevMatrix[newX][newY] = current;
             return true;
         }
 
 
-        if (isPossibleForStep(newX, newY) && !isTakePlace(newX, newY) 
+        if (isPossibleForStep(newX, newY) && !isTakePlace(newX, newY)
                 && prevMatrix[newX][newY] == null) {
             queue.add(new Point2D(newX, newY));
-            prevMatrix[newX][newY] = current.copy();
+            prevMatrix[newX][newY] = current;
         }
 
 
@@ -396,7 +374,8 @@ public class World {
 
     /**
      * Translates coordinates from task to real field coordinates
-     * @param x 
+     *
+     * @param x
      * @param y
      * @return
      */
